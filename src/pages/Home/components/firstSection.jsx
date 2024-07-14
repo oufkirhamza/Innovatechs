@@ -5,7 +5,6 @@ import { MdArrowOutward } from "react-icons/md";
 import Star from "../../../components/strar";
 
 export const FirstSection = () => {
-  const { star } = useContext(MyContext);
   
   return (
     <div className="flex flex-col bg-alpha px-52 py-8 text-white gap-8 relative overflow-hidden">

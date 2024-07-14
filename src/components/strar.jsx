@@ -1,8 +1,7 @@
 const Star = ({className}) => {
   return (
     <svg
-      width="90"
-      height="100"
+
       viewBox="0 0 111 110"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

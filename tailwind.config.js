@@ -13,7 +13,7 @@ module.exports = {
         "alpha": "#191627",
         "teta" : "#5c45fd",
         "beta": "#a89bff",
-        "delta": "#161616",
+        "delta": "#f5f5f5",
       },
     },
   },
