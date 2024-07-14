@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./firstSection.sass";
 import { MyContext } from "../../../utils/contextProvider";
 import { MdArrowOutward } from "react-icons/md";
+import Star from "../../../components/strar";
 
 export const FirstSection = () => {
   const { star } = useContext(MyContext);
@@ -11,7 +12,7 @@ export const FirstSection = () => {
         <div className="bluri absolute -right-64 top-16 w-[400px] h-[300px] rounded-full"></div>
         <div className="bluri absolute -left-64 bottom-12 w-[300px] h-[300px] rounded-full"></div>
       <h1 className="text-9xl text-balance font-medium">
-        <span className="flex items-center gap-4">We develop {star}</span> <span>amazing</span> websites for your business
+        <span className="flex items-center gap-4">We develop <Star className="w-10"/> </span> <span>amazing</span> websites for your business
         <span className="text-teta">.</span>
       </h1>
       <p className="w-[65%] text-md ">
