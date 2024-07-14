@@ -48,10 +48,10 @@ export const ServiceSection = () => {
     },
   ];
   return (
-    <div className="bg-alpha px-52 text-white py-8 relative overflow-x-hidden">
+    <div className="bg-alpha px-10 lg:px-52 text-white py-8 relative overflow-x-hidden">
       <div className="bluri absolute -right-72 top-16 w-[400px] h-[300px] rounded-full"></div>
       <div className="bluri absolute -left-64 bottom-12 w-[300px] h-[300px] rounded-full"></div>
-        <Star className='absolute right-[40vw] top-24 w-3'/>
+        <Star className='absolute right-[40vw] top-24 w-3 hidden lg:flex'/>
       <h1 className="text-teta tracking-wider">S E R V I C E</h1>
       <div className="text-4xl flex items-center gap-3 py-5">
         <h1>Exceeding Expectations</h1> <Star className="w-10" />
@@ -60,9 +60,9 @@ export const ServiceSection = () => {
         We're not just another agency; we're your path to exceptional web
         projects.
       </p>
-      <div className="flex gap-6 flex-wrap py-7">
+      <div className="flex flex-col lg:flex-row gap-6 flex-wrap py-7">
         {services.map((element, index) => (
-          <div className="p-4 w-[30%] flex flex-col gap-3 border border-[#f5f5f595] bg-[#f5f5f517] rounded">
+          <div key={index} className="p-4 lg:w-[30%] flex flex-col gap-3 border border-[#f5f5f595] bg-[#f5f5f517] rounded">
             <div className="bg-[#f5f5f54c] w-[30%] rounded-lg">
               <img className="" src={element.icon} alt="" />
             </div>

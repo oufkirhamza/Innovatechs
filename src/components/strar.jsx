@@ -20,8 +20,8 @@ const Star = ({className}) => {
           y2="55"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5C45FD" />
-          <stop offset="1" stop-color="#D5D4D9" />
+          <stop stopColor="#5C45FD"  />
+          <stop offset="1" stopColor="#D5D4D9" />
         </linearGradient>
       </defs>
     </svg>

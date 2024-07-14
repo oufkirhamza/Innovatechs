@@ -7,11 +7,11 @@ import Star from "../../../components/strar";
 export const FirstSection = () => {
   
   return (
-    <div className="flex flex-col bg-alpha px-52 py-8 text-white gap-8 relative overflow-hidden">
+    <div className=" flex flex-col bg-alpha lg:px-52 px-10 py-28 lg:py-8 text-white gap-8 relative overflow-hidden">
         <div className="bluri absolute -right-64 top-16 w-[400px] h-[300px] rounded-full"></div>
         <div className="bluri absolute -left-64 bottom-12 w-[300px] h-[300px] rounded-full"></div>
-      <h1 className="text-9xl text-balance font-medium">
-        <span className="flex items-center gap-4">We develop <Star className="w-10"/> </span> <span>amazing</span> websites for your business
+      <h1 className="text-5xl lg:text-9xl lg:text-balance font-medium">
+        <span className="flex items-center gap-4">We develop <Star className="w-10"/> </span> <span className="text-teta">amazing</span> websites for your business
         <span className="text-teta">.</span>
       </h1>
       <p className="w-[65%] text-md ">
