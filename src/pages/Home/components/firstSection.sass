@@ -3,4 +3,24 @@
     background-image: radial-gradient(circle, #191627, #1d1745, #382f8c, #493bc3b6, #7966f588)
     filter: blur(3rem)
     opacity: 50%
+.project-container
+  position: relative
+  .overlay
+    background-color: rgba(75, 75, 75, 0.7)
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 20%
+    display: flex
+    justify-content: center
+    align-items: center
+    opacity: 0
+    transition: opacity 0.3s ease-in-out
+  &:hover .overlay
+    opacity: 1
+.focus
+    padding: 0
+    font-size: 90px
+    margin-bottom: 30px
+
     
