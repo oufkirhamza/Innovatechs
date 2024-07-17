@@ -49,7 +49,7 @@ export const TestimonialsSection = () => {
     ]
 
 
-    
+
 
     useEffect(() => {
         const test = document.querySelectorAll('.test');
@@ -93,10 +93,8 @@ export const TestimonialsSection = () => {
                     <React.Fragment key={index}>
                         <div className="mt-7 p-4 w-[90%] flex flex-col gap-3 border border-[#f5f5f595] bg-[#f5f5f517] rounded test">
                             <p className="text-center p-7">
-{element.feedback}
+                                {element.feedback}
                             </p>
-
-
                             <div key={index} className="flex flex-col justify-center items-center gap-1 ">
                                 <img width={80} className="rounded-full" src={element.image} alt="" srcset="" />
                                 <p className="text-xl"><b>{element.nom}</b></p>

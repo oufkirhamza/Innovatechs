@@ -1,4 +1,5 @@
 
+import { AboutSection } from './components/aboutSection';
 import { FirstSection } from './components/firstSection';
 import { PortfolioSection } from './components/portfolio';
 import { ServiceSection } from './components/serviceSection';
@@ -9,6 +10,7 @@ export const HomePage = () => {
             <FirstSection/>
             <ServiceSection/>
             <PortfolioSection/>
+            <AboutSection/>
             <TestimonialsSection/>
         </>
     );
