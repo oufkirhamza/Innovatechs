@@ -42,14 +42,14 @@ export const PortfolioSection = () => {
             <div className="text-4xl lg:flex items-center gap-3 py-5">
                 <h1>Our latest work</h1><Star className="w-10" />
             </div>
-            <p className="w-[70%]">
+            <p className="lg:w-[70%]">
             Discover our fresher creation that showcase the power of design 
              innovation and digital ecellence.explore our latest work 
              and witness the impact we bring to every project
             </p>
-            <div className="lg:flex gap-3 flex-wrap py-7">
+            <div className="lg:flex gap-3 justify-center items-center  flex-wrap py-7">
                 {projects.map((element, index)=>
-                <div key={index} className="p-4 lg:w-[30%] rounded flex flex-col ">
+                <div key={index} className="p-4 lg:w-[32%] rounded flex flex-col ">
                 <div className="relative  project-container">
                     <img height="" className="h-[250px] w-[100%] rounded-lg " src={element.image} alt="" />
                     <div className="overlay bg-gray-600 opacity-30 flex justify-center items-center absolute bottom-0 w-[100%]  cursor-pointer "><span className="text-white font-bold text-center mx-1">view project </span><FaLongArrowAltRight className="mt-1" /></div>
