@@ -60,7 +60,7 @@ export const ServiceSection = () => {
         We're not just another agency; we're your path to exceptional web
         projects.
       </p>
-      <div className="flex flex-col lg:flex-row gap-6 flex-wrap py-7">
+      <div className="flex flex-col lg:flex-row gap-6 flex-wrap py-7 justify-center">
         {services.map((element, index) => (
           <div key={index} className="p-4 lg:w-[30%] flex flex-col gap-3 border border-[#f5f5f595] bg-[#f5f5f517] rounded">
             <div className="bg-[#f5f5f54c] w-[30%] rounded-lg">

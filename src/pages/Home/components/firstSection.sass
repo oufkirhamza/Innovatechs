@@ -1,8 +1,8 @@
 
 .bluri
-    background-image: radial-gradient(circle, #191627, #1d1745, #382f8c, #493bc3b6, #7966f588)
-    filter: blur(3rem)
-    opacity: 50%
+  background-image: radial-gradient(circle, #191627, #1d1745, #382f8c, #493bc3b6, #7966f588)
+  filter: blur(3rem)
+  opacity: 50%
 .project-container
   position: relative
   .overlay
@@ -19,8 +19,18 @@
   &:hover .overlay
     opacity: 1
 .focus
-    padding: 0
-    font-size: 90px
-    margin-bottom: 30px
+  padding: 0
+  font-size: 90px
+  margin-bottom: 30px
 
-    
+@keyframes scroll
+  from
+    transform: translateX(0)
+  to
+    transform: translateX(calc(-100% - 1.25rem))
+
+.scroll
+  animation: scroll 25s linear infinite
+
+.reverse
+  animation-direction: reverse

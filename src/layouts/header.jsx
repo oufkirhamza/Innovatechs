@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { TbMenu2 } from "react-icons/tb";
 import { MdClose } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +15,10 @@ const Header = () => {
           isOpen ? "max-[430px]:top-20" : "max-[430px]:-top-96"
         }`}
       >
-        <p className="cursor-pointer hover:text-teta">Why Us</p>
-        <p className="cursor-pointer hover:text-teta">Case Studies</p>
-        <p className="cursor-pointer hover:text-teta">Testimonials</p>
-        <p className="cursor-pointer hover:text-teta">FAQ</p>
+        <Link className="cursor-pointer hover:text-teta">Why Us</Link>
+        <Link className="cursor-pointer hover:text-teta">Case Studies</Link>
+        <Link className="cursor-pointer hover:text-teta">Testimonials</Link>
+        <Link className="cursor-pointer hover:text-teta">FAQ</Link>
       </div>
       <button className="flex gap-3 items-center px-3 bg-teta py-2 rounded-md">
         Let's Talk <MdArrowOutward />
