@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import "./firstSection.sass";
-import { MyContext } from "../../../utils/contextProvider";
 import { MdArrowOutward } from "react-icons/md";
 import Star from "../../../components/strar";
 
