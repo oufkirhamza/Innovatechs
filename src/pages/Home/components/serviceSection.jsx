@@ -3,8 +3,10 @@ import { MdArrowOutward } from "react-icons/md";
 import { Section, Eyebrow } from "../../../components/Section";
 import { SERVICES } from "../../../data/services";
 import { scrollToSection } from "../../../utils/scrollToSection";
+import { useLocale } from "../../../i18n/locale";
 
 export const ServiceSection = () => {
+  const { t } = useLocale();
   const [openId, setOpenId] = useState(null);
 
   const discuss = () => {
@@ -16,14 +18,15 @@ export const ServiceSection = () => {
 
   return (
     <Section id="services">
-      <Eyebrow>02 / What we do</Eyebrow>
+      <Eyebrow>{t.services.eyebrow}</Eyebrow>
       <h2 className="mt-4 max-w-[14ch] text-[34px] font-semibold leading-[1.05] tracking-[-0.035em] sm:text-[44px] lg:text-[52px]">
-        From first idea
-        <span className="block">to finished product.</span>
+        {t.services.title1}
+        <span className="block">{t.services.title2}</span>
       </h2>
 
       <div className="mt-12 border-t border-white/[0.11] lg:mt-16">
         {SERVICES.map((service) => {
+          const copy = t.services.items[service.id];
           const open = openId === service.id;
           const panelId = `service-panel-${service.id}`;
           return (
@@ -47,7 +50,7 @@ export const ServiceSection = () => {
                     {service.number}
                   </span>
                   <span className="text-[24px] font-semibold tracking-[-0.03em] transition-colors group-hover:text-teta sm:text-[28px]">
-                    {service.title}
+                    {copy.title}
                   </span>
                   <MdArrowOutward
                     aria-hidden
@@ -56,14 +59,14 @@ export const ServiceSection = () => {
                     }`}
                   />
                   <span className="col-start-2 max-w-xl text-[15px] leading-relaxed text-muted">
-                    {service.description}
+                    {copy.description}
                   </span>
                 </button>
               </h3>
               <div
                 id={panelId}
                 role="region"
-                aria-label={service.title}
+                aria-label={copy.title}
                 className={`grid transition-[grid-template-rows] duration-300 ease-out ${
                   open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                 }`}
@@ -72,14 +75,14 @@ export const ServiceSection = () => {
                   <div className="grid grid-cols-[auto_1fr] gap-x-4 pb-7 sm:gap-x-6">
                     <span className="w-6 sm:w-7" aria-hidden />
                     <div className="max-w-xl">
-                      <p className="text-[15px] leading-relaxed text-muted">{service.detail}</p>
+                      <p className="text-[15px] leading-relaxed text-muted">{copy.detail}</p>
                       <button
                         type="button"
                         onClick={discuss}
                         className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-teta"
                         tabIndex={open ? 0 : -1}
                       >
-                        Discuss this service <MdArrowOutward aria-hidden />
+                        {t.services.discuss} <MdArrowOutward aria-hidden />
                       </button>
                     </div>
                   </div>

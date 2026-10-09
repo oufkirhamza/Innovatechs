@@ -1,44 +1,26 @@
 import { Section, Eyebrow } from "../../../components/Section";
+import { useLocale } from "../../../i18n/locale";
 
-const steps = [
-  {
-    number: "01",
-    title: "Understand",
-    description: "We talk through the business problem, the people involved, and how the work happens today.",
-  },
-  {
-    number: "02",
-    title: "Define",
-    description: "We agree on what will be built, why it matters, and the order of the work.",
-  },
-  {
-    number: "03",
-    title: "Build & Refine",
-    description: "We design and develop in stages, reviewing progress with you as it takes shape.",
-  },
-  {
-    number: "04",
-    title: "Launch & Handover",
-    description: "We test, launch, and walk you through the finished work. Ongoing support can be agreed separately.",
-  },
-];
+const NUMBERS = ["01", "02", "03", "04"];
 
 export const ProcessSection = () => {
+  const { t } = useLocale();
+  const steps = t.process.steps;
   return (
     <Section id="process">
-      <Eyebrow>04 / How we work</Eyebrow>
+      <Eyebrow>{t.process.eyebrow}</Eyebrow>
       <h2 className="mt-4 max-w-[16ch] text-[34px] font-semibold leading-[1.05] tracking-[-0.035em] sm:text-[44px] lg:text-[52px]">
-        From idea to launch.
-        <span className="block">A clear process.</span>
+        {t.process.title1}
+        <span className="block">{t.process.title2}</span>
       </h2>
 
       <ol className="mt-12 lg:mt-16 lg:grid lg:grid-cols-4 lg:gap-8">
         {steps.map((step, index) => (
-          <li key={step.number} className="relative pb-10 last:pb-0 lg:pb-0">
+          <li key={NUMBERS[index]} className="relative pb-10 last:pb-0 lg:pb-0">
             <div className="flex items-start gap-5 lg:block">
               <div className="relative shrink-0">
                 <span className="block text-[40px] font-semibold leading-none tracking-[-0.04em] text-teta lg:text-[46px]">
-                  {step.number}
+                  {NUMBERS[index]}
                 </span>
                 {index < steps.length - 1 && (
                   <span
@@ -50,7 +32,7 @@ export const ProcessSection = () => {
               <div className="pt-1 lg:pt-6">
                 {index < steps.length - 1 && (
                   <span
-                    className="absolute left-[4.5rem] right-[-2rem] top-[22px] hidden h-px bg-white/15 lg:block"
+                    className="absolute start-[4.5rem] end-[-2rem] top-[22px] hidden h-px bg-white/15 lg:block"
                     aria-hidden
                   />
                 )}

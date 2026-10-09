@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Section } from "../../../components/Section";
 import { trackEvent } from "../../../utils/analytics";
 import { SITE } from "../../../constants/site";
+import { useLocale } from "../../../i18n/locale";
 
 const FORMSPREE_ID = process.env.REACT_APP_FORMSPREE_FORM_ID;
 const CALENDLY_URL = process.env.REACT_APP_CALENDLY_URL;
@@ -9,12 +10,13 @@ const formDeliveryConfigured =
   Boolean(FORMSPREE_ID) && FORMSPREE_ID !== "your_form_id";
 
 export const Contact = () => {
+  const { t } = useLocale();
   const [status, setStatus] = useState("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [mailtoHref, setMailtoHref] = useState(`mailto:${SITE.email}`);
 
   const whatsappHref = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
-    "Hi Innovatechs! I'd like to discuss a project."
+    t.contact.whatsappText
   )}`;
 
   const handleSubmit = async (e) => {
@@ -29,14 +31,14 @@ export const Contact = () => {
 
     if (!name || !email || !message) {
       setStatus("error");
-      setErrorMessage("Please fill in your name, email, and message.");
+      setErrorMessage(t.contact.requiredError);
       return;
     }
 
     if (!formDeliveryConfigured) {
-      const subject = encodeURIComponent(`Project inquiry from ${name}`);
+      const subject = encodeURIComponent(`${t.contact.mailSubject} ${name}`);
       const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\n\n${message}`
+        `${t.contact.name}: ${name}\n${t.contact.email}: ${email}\n${t.contact.phone}: ${phone || t.contact.notProvided}\n\n${message}`
       );
       setStatus("fallback");
       setErrorMessage("");
@@ -56,18 +58,15 @@ export const Contact = () => {
       });
 
       if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.error || "Something went wrong. Please try again.");
+        throw new Error(t.contact.genericError);
       }
 
       setStatus("success");
       trackEvent("form_submit", { method: "formspree" });
       form.reset();
-    } catch (err) {
+    } catch {
       setStatus("error");
-      setErrorMessage(
-        err.message || "Could not send your message. Please try again."
-      );
+      setErrorMessage(t.contact.sendError);
     }
   };
 
@@ -76,15 +75,14 @@ export const Contact = () => {
       <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
         <div>
           <h2 className="text-[34px] font-semibold leading-[1.05] tracking-[-0.035em] sm:text-[44px] lg:text-[50px]">
-            Tell us what you&apos;re building.
+            {t.contact.title}
           </h2>
           <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted sm:text-[16px]">
-            Describe the idea, the problem, or the system you want to improve. We&apos;ll reply
-            with a practical next step.
+            {t.contact.body}
           </p>
           <ul className="mt-8 border-t border-white/[0.11]">
             <li className="border-b border-white/[0.11] py-4">
-              <p className="text-[11px] uppercase tracking-[0.16em] text-muted">Email</p>
+              <p className="text-[11px] uppercase tracking-[0.16em] text-muted">{t.contact.email}</p>
               <a
                 href={`mailto:${SITE.email}`}
                 className="mt-1 inline-block break-all text-[15px] transition-colors hover:text-teta"
@@ -93,7 +91,7 @@ export const Contact = () => {
               </a>
             </li>
             <li className="border-b border-white/[0.11] py-4">
-              <p className="text-[11px] uppercase tracking-[0.16em] text-muted">Phone</p>
+              <p className="text-[11px] uppercase tracking-[0.16em] text-muted">{t.contact.phone}</p>
               <a
                 href={`tel:${SITE.phone}`}
                 className="mt-1 inline-block text-[15px] transition-colors hover:text-teta"
@@ -102,14 +100,14 @@ export const Contact = () => {
               </a>
             </li>
             <li className="border-b border-white/[0.11] py-4">
-              <p className="text-[11px] uppercase tracking-[0.16em] text-muted">WhatsApp</p>
+              <p className="text-[11px] uppercase tracking-[0.16em] text-muted">{t.contact.whatsapp}</p>
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-1 inline-block text-[15px] transition-colors hover:text-teta"
               >
-                Message {SITE.name}
+                {t.contact.messageUs} {SITE.name}
               </a>
             </li>
           </ul>
@@ -122,24 +120,23 @@ export const Contact = () => {
                 className="mb-6 border border-emerald-500/40 bg-emerald-500/10 p-5"
                 role="status"
               >
-                <p className="font-semibold text-emerald-300">Message sent</p>
+                <p className="font-semibold text-emerald-300">{t.contact.sentTitle}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
-                  Thanks for reaching out. We&apos;ll follow up to discuss next steps.
-                  {CALENDLY_URL && " You can also book a call below."}
+                  {t.contact.sentBody}
+                  {CALENDLY_URL && t.contact.sentCall}
                 </p>
               </div>
             )}
 
             {status === "fallback" && (
               <div className="mb-6 border border-teta/40 bg-teta/10 p-5" role="status">
-                <p className="font-semibold">Reach us directly by email or WhatsApp</p>
+                <p className="font-semibold">{t.contact.fallbackTitle}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">
-                  Online form delivery is not configured yet. Please contact us using one of the
-                  options below — we will discuss next steps with you.
+                  {t.contact.fallbackBody}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-3">
                   <a href={mailtoHref} className="btn btn-primary btn-sm">
-                    Open email draft
+                    {t.contact.openEmail}
                   </a>
                   <a
                     href={whatsappHref}
@@ -147,7 +144,7 @@ export const Contact = () => {
                     rel="noopener noreferrer"
                     className="btn btn-secondary btn-sm"
                   >
-                    WhatsApp
+                    {t.contact.whatsapp}
                   </a>
                 </div>
               </div>
@@ -158,7 +155,7 @@ export const Contact = () => {
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <label htmlFor="contact-name" className="field-label">
-                  Name <span className="text-teta">*</span>
+                  {t.contact.name} <span className="text-teta">*</span>
                 </label>
                 <input
                   id="contact-name"
@@ -167,13 +164,13 @@ export const Contact = () => {
                   required
                   autoComplete="name"
                   className="field"
-                  placeholder="Your name"
+                  placeholder={t.contact.namePlaceholder}
                   aria-invalid={status === "error"}
                 />
               </div>
               <div>
                 <label htmlFor="contact-email" className="field-label">
-                  Email <span className="text-teta">*</span>
+                  {t.contact.email} <span className="text-teta">*</span>
                 </label>
                 <input
                   id="contact-email"
@@ -182,14 +179,14 @@ export const Contact = () => {
                   required
                   autoComplete="email"
                   className="field"
-                  placeholder="you@company.com"
+                  placeholder={t.contact.emailPlaceholder}
                   aria-invalid={status === "error"}
                 />
               </div>
             </div>
             <div className="mt-5">
               <label htmlFor="contact-phone" className="field-label">
-                Phone <span className="text-muted">(optional)</span>
+                {t.contact.phone} <span className="text-muted">{t.contact.optional}</span>
               </label>
               <input
                 id="contact-phone"
@@ -197,12 +194,12 @@ export const Contact = () => {
                 type="tel"
                 autoComplete="tel"
                 className="field"
-                placeholder="+212 6XX XXX XXX"
+                placeholder={t.contact.phonePlaceholder}
               />
             </div>
             <div className="mt-5">
               <label htmlFor="contact-message" className="field-label">
-                Message <span className="text-teta">*</span>
+                {t.contact.message} <span className="text-teta">*</span>
               </label>
               <textarea
                 id="contact-message"
@@ -210,7 +207,7 @@ export const Contact = () => {
                 required
                 rows={5}
                 className="field min-h-[140px] resize-y"
-                placeholder="What would you like to build or improve?"
+                placeholder={t.contact.messagePlaceholder}
                 aria-invalid={status === "error"}
               />
             </div>
@@ -226,11 +223,10 @@ export const Contact = () => {
               disabled={status === "submitting"}
               className="btn btn-primary mt-6 w-full sm:w-auto"
             >
-              {status === "submitting" ? "Sending…" : "Send message"}
+              {status === "submitting" ? t.contact.sending : t.contact.send}
             </button>
             <p className="mt-4 text-[13px] leading-relaxed text-muted">
-              By submitting, you agree we may use your details to respond to your inquiry. We do
-              not sell your data to third parties.
+              {t.contact.consent}
             </p>
           </form>
         </div>
@@ -238,9 +234,9 @@ export const Contact = () => {
 
       {CALENDLY_URL && (
         <div className="mt-14 max-w-xl">
-          <h3 className="text-xl font-semibold">Prefer a call?</h3>
+          <h3 className="text-xl font-semibold">{t.contact.callTitle}</h3>
           <iframe
-            title="Book a meeting with Innovatechs"
+            title={t.contact.callFrame}
             src={CALENDLY_URL}
             className="mt-4 h-[520px] w-full border border-white/15"
             loading="lazy"

@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 import { Section, Eyebrow } from "../../../components/Section";
 import { ProjectPreview } from "../../../components/mockups/ConceptMockups";
-import { PROJECTS, projectActionLabel, projectPath } from "../../../data/projects";
+import { PROJECTS, projectPath } from "../../../data/projects";
+import { useLocale } from "../../../i18n/locale";
 
 const Tags = ({ tags }) => (
   <ul className="flex flex-wrap gap-2">
@@ -27,8 +28,8 @@ const Meta = ({ project }) => (
   </div>
 );
 
-const Action = ({ project, className = "" }) => {
-  const label = projectActionLabel(project);
+const Action = ({ project, label, className = "" }) => {
+  const { to } = useLocale();
   const classNames = `inline-flex items-center gap-2 text-sm font-medium text-ink transition-colors group-hover:text-teta ${className}`;
   const icon = (
     <MdArrowOutward
@@ -47,26 +48,29 @@ const Action = ({ project, className = "" }) => {
   }
 
   return (
-    <Link to={projectPath(project)} className={classNames}>
+    <Link to={to(projectPath(project))} className={classNames}>
       {label}
       {icon}
     </Link>
   );
 };
 
-const Preview = ({ project, className = "", imageFirst = false }) => (
+const Preview = ({ project, label, className = "", imageFirst = false }) => {
+  const { to } = useLocale();
+  return (
   <Link
-    to={projectPath(project)}
-    aria-label={`${projectActionLabel(project)}: ${project.title}`}
+    to={to(projectPath(project))}
+    aria-label={`${label}: ${project.title}`}
     className={`relative block w-full overflow-hidden text-left ${className}`}
   >
     <div className="project-zoom absolute inset-0" aria-hidden>
       <ProjectPreview project={project} imageFirst={imageFirst} />
     </div>
   </Link>
-);
+  );
+};
 
-const ProjectCopy = ({ project, showHeadline = false }) => (
+const ProjectCopy = ({ project, label, showHeadline = false }) => (
   <div className="flex h-full flex-col justify-between gap-8 p-6 sm:p-8 lg:p-10">
     <div>
       <Meta project={project} />
@@ -84,36 +88,39 @@ const ProjectCopy = ({ project, showHeadline = false }) => (
     </div>
     <div>
       <Tags tags={project.tags} />
-      <Action project={project} className="mt-6" />
+      <Action project={project} label={label} className="mt-6" />
     </div>
   </div>
 );
 
 export const WorkSection = () => {
-  const featured = PROJECTS.find((project) => project.layout === "feature");
-  const paired = PROJECTS.filter((project) => project.layout === "pair");
-  const wide = PROJECTS.filter((project) => project.layout === "wide");
+  const { t, to } = useLocale();
+  const labelFor = (project) => (project.liveUrl ? t.work.viewLive : t.work.explore);
+  const withCopy = (project) => ({ ...project, ...t.projects[project.id] });
+  const featured = PROJECTS.filter((project) => project.layout === "feature").map(withCopy)[0];
+  const paired = PROJECTS.filter((project) => project.layout === "pair").map(withCopy);
+  const wide = PROJECTS.filter((project) => project.layout === "wide").map(withCopy);
 
   return (
     <Section id="work">
-      <Eyebrow>01 / Selected work</Eyebrow>
+      <Eyebrow>{t.work.eyebrow}</Eyebrow>
       <div className="mt-4 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <h2 className="max-w-[14ch] text-[34px] font-semibold leading-[1.05] tracking-[-0.035em] sm:text-[44px] lg:text-[52px]">
-          Digital experiences.
-          <span className="block">Built to make an impact.</span>
+          {t.work.title1}
+          <span className="block">{t.work.title2}</span>
         </h2>
         <div className="max-w-sm lg:pb-1">
           <p className="text-[15px] leading-relaxed text-muted sm:text-[16px]">
-            A glimpse into the kinds of digital products we design and develop.
+            {t.work.intro}
           </p>
           <p className="mt-4 inline-flex border border-white/15 px-3 py-1 text-[11px] uppercase tracking-[0.16em] text-muted">
-            Concepts &amp; selected demos
+            {t.work.label}
           </p>
           <Link
-            to="/work"
+            to={to("/work")}
             className="mt-4 flex w-fit items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-teta"
           >
-            View all work
+            {t.work.viewAll}
             <MdArrowOutward aria-hidden />
           </Link>
         </div>
@@ -125,10 +132,11 @@ export const WorkSection = () => {
             <div className="grid lg:grid-cols-[1.72fr_0.9fr]">
               <Preview
                 project={featured}
+                label={labelFor(featured)}
                 className="h-full min-h-[300px] sm:min-h-[440px] lg:min-h-[560px]"
               />
               <div className="border-t border-white/[0.11] lg:border-l lg:border-t-0">
-                <ProjectCopy project={featured} showHeadline />
+                <ProjectCopy project={featured} label={labelFor(featured)} showHeadline />
               </div>
             </div>
           </article>
@@ -143,10 +151,11 @@ export const WorkSection = () => {
               >
                 <Preview
                   project={project}
+                  label={labelFor(project)}
                   className="min-h-[260px] sm:min-h-[340px] lg:min-h-[400px]"
                 />
                 <div className="flex flex-1 flex-col border-t border-white/[0.11]">
-                  <ProjectCopy project={project} />
+                  <ProjectCopy project={project} label={labelFor(project)} />
                 </div>
               </article>
             ))}
@@ -160,10 +169,11 @@ export const WorkSection = () => {
           >
             <div className="grid lg:grid-cols-[0.82fr_1.35fr]">
               <div className="order-2 border-t border-white/[0.11] lg:order-1 lg:border-r lg:border-t-0">
-                <ProjectCopy project={project} />
+                <ProjectCopy project={project} label={labelFor(project)} />
               </div>
               <Preview
                 project={project}
+                label={labelFor(project)}
                 className="order-1 h-full min-h-[280px] sm:min-h-[400px] lg:order-2 lg:min-h-[500px]"
               />
             </div>

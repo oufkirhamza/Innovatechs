@@ -1,15 +1,18 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { scrollToSection } from "../utils/scrollToSection";
+import { stripLocale, useLocale } from "../i18n/locale";
 
 const NavAnchor = ({ sectionId, children, className = "", onNavigate, style }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const { to } = useLocale();
+  const href = to(`/#${sectionId}`);
 
   const handleClick = (e) => {
     e.preventDefault();
     onNavigate?.();
-    if (pathname !== "/") {
-      navigate(`/#${sectionId}`);
+    if (stripLocale(pathname) !== "/") {
+      navigate(href);
       return;
     }
     scrollToSection(sectionId);
@@ -17,7 +20,7 @@ const NavAnchor = ({ sectionId, children, className = "", onNavigate, style }) =
   };
 
   return (
-    <a href={`/#${sectionId}`} onClick={handleClick} className={className} style={style}>
+    <a href={href} onClick={handleClick} className={className} style={style}>
       {children}
     </a>
   );

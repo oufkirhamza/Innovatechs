@@ -4,21 +4,21 @@ import { MdArrowOutward } from "react-icons/md";
 import { ProjectPreview } from "../../components/mockups/ConceptMockups";
 import { PROJECTS, projectPath } from "../../data/projects";
 import NotFound from "../NotFound";
-
-const HOME_TITLE = "Innovatechs | Websites, Custom Software & AI Automation";
+import { useLocale } from "../../i18n/locale";
 
 const ProjectPage = () => {
   const { slug } = useParams();
-  const project = PROJECTS.find((item) => item.slug === slug);
-  const others = PROJECTS.filter((item) => item.slug !== slug);
+  const { t, to } = useLocale();
+  const source = PROJECTS.find((item) => item.slug === slug);
+  const project = source ? { ...source, ...t.projects[source.id] } : null;
+  const others = PROJECTS.filter((item) => item.slug !== slug).map((item) => ({
+    ...item,
+    ...t.projects[item.id],
+  }));
 
   useEffect(() => {
-    const previous = document.title;
-    if (project) document.title = `${project.title} | Innovatechs`;
-    return () => {
-      document.title = previous || HOME_TITLE;
-    };
-  }, [project]);
+    if (source) document.title = `${source.title} | Innovatechs`;
+  }, [source]);
 
   if (!project) return <NotFound />;
 
@@ -27,10 +27,10 @@ const ProjectPage = () => {
   return (
     <article className="shell pb-16 pt-10 lg:pb-24 lg:pt-14">
       <Link
-        to="/work"
+        to={to("/work")}
         className="text-[13px] tracking-wide text-muted transition-colors hover:text-teta"
       >
-        ← All work
+        {t.work.back}
       </Link>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
@@ -56,9 +56,7 @@ const ProjectPage = () => {
             {project.description}
           </p>
           <p className="mt-4 max-w-xl text-[13px] leading-relaxed text-muted/80">
-            {isLive
-              ? "This is a public site. The notes below describe what the project includes."
-              : "This is a concept study of the kind of website we design. It is not a completed client project."}
+            {isLive ? t.work.liveNote : t.work.conceptNote}
           </p>
         </div>
       </div>
@@ -70,7 +68,7 @@ const ProjectPage = () => {
       <div className="mt-10 grid gap-10 lg:mt-14 lg:grid-cols-[1fr_0.8fr] lg:gap-16">
         <div>
           <h2 className="text-[12px] uppercase tracking-[0.18em] text-muted">
-            {isLive ? "What it includes" : "Proposed functionality"}
+            {isLive ? t.work.includes : t.work.proposed}
           </h2>
           <ul className="mt-4 border-t border-white/[0.11]">
             {project.features.map((feature) => (
@@ -84,7 +82,7 @@ const ProjectPage = () => {
           </ul>
         </div>
         <div>
-          <h2 className="text-[12px] uppercase tracking-[0.18em] text-muted">Focus</h2>
+          <h2 className="text-[12px] uppercase tracking-[0.18em] text-muted">{t.work.focus}</h2>
           <ul className="mt-4 flex flex-wrap gap-2">
             {project.tags.map((tag) => (
               <li
@@ -103,11 +101,11 @@ const ProjectPage = () => {
                 rel="noopener noreferrer"
                 className="btn btn-primary"
               >
-                View live demo <MdArrowOutward aria-hidden />
+                {t.work.viewLive} <MdArrowOutward aria-hidden />
               </a>
             ) : null}
-            <Link to="/#contact" className={isLive ? "btn btn-secondary" : "btn btn-primary"}>
-              Start a project like this
+            <Link to={to("/#contact")} className={isLive ? "btn btn-secondary" : "btn btn-primary"}>
+              {t.work.likeThis}
             </Link>
           </div>
         </div>
@@ -115,12 +113,12 @@ const ProjectPage = () => {
 
       {others.length > 0 && (
         <div className="mt-16 border-t border-white/[0.11] pt-10">
-          <p className="eyebrow">More work</p>
+          <p className="eyebrow">{t.work.more}</p>
           <ul className="mt-6 divide-y divide-white/[0.11] border-y border-white/[0.11]">
             {others.map((item) => (
               <li key={item.id}>
                 <Link
-                  to={projectPath(item)}
+                  to={to(projectPath(item))}
                   className="group flex items-center justify-between gap-4 py-4"
                 >
                   <span>

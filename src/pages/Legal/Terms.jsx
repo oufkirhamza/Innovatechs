@@ -1,51 +1,54 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { SITE } from "../../constants/site";
+import { dateLocale, useLocale } from "../../i18n/locale";
 
-const Terms = () => (
+const Terms = () => {
+  const { t, to, lang } = useLocale();
+
+  useEffect(() => {
+    document.title = `${t.legal.termsTitle} | Innovatechs`;
+  }, [t.legal.termsTitle]);
+
+  return (
   <article className="shell min-h-[60vh] py-16">
-    <Link to="/" className="text-teta hover:underline text-sm">
-      ← Back to home
+    <Link to={to("/")} className="text-teta hover:underline text-sm">
+      {t.legal.back}
     </Link>
-    <h1 className="text-4xl font-bold mt-6 mb-4">Terms of Service</h1>
+    <h1 className="text-4xl font-bold mt-6 mb-4">{t.legal.termsTitle}</h1>
     <p className="text-[#f5f5f5b4] mb-6 max-w-3xl leading-relaxed">
-      Last updated:{" "}
-      {new Date().toLocaleDateString("en-GB", { month: "long", year: "numeric" })}
+      {t.legal.updated}{" "}
+      {new Date().toLocaleDateString(dateLocale(lang), { month: "long", year: "numeric" })}
     </p>
     <div className="max-w-3xl space-y-6 text-[#f5f5f5cc] leading-relaxed">
       <section>
-        <h2 className="text-xl font-semibold text-white mb-2">Services</h2>
+        <h2 className="text-xl font-semibold text-white mb-2">{t.terms.servicesTitle}</h2>
         <p>
-          {SITE.name} provides websites, custom applications, integrations, automation and
-          related digital services as agreed in individual project proposals or statements
-          of work.
+          {SITE.name} {t.terms.services}
         </p>
       </section>
       <section>
-        <h2 className="text-xl font-semibold text-white mb-2">Quotes & payment</h2>
+        <h2 className="text-xl font-semibold text-white mb-2">{t.terms.paymentTitle}</h2>
         <p>
-          Pricing and timelines are confirmed in writing before work begins. Payment terms
-          are defined per project (typically deposit + milestones).
+          {t.terms.payment}
         </p>
       </section>
       <section>
-        <h2 className="text-xl font-semibold text-white mb-2">Intellectual property</h2>
+        <h2 className="text-xl font-semibold text-white mb-2">{t.terms.ipTitle}</h2>
         <p>
-          Upon full payment, clients receive agreed usage rights to deliverables unless
-          otherwise specified. {SITE.name} may showcase completed work in its portfolio
-          unless a confidentiality agreement states otherwise.
+          {t.terms.ipBefore} {SITE.name} {t.terms.ipAfter}
         </p>
       </section>
       <section>
-        <h2 className="text-xl font-semibold text-white mb-2">Limitation</h2>
+        <h2 className="text-xl font-semibold text-white mb-2">{t.terms.limitTitle}</h2>
         <p>
-          We are not liable for indirect damages arising from use of our services beyond the
-          amount paid for the specific project, to the extent permitted by law.
+          {t.terms.limit}
         </p>
       </section>
       <section>
-        <h2 className="text-xl font-semibold text-white mb-2">Contact</h2>
+        <h2 className="text-xl font-semibold text-white mb-2">{t.terms.contactTitle}</h2>
         <p>
-          Questions:{" "}
+          {t.terms.questions}{" "}
           <a href={`mailto:${SITE.email}`} className="text-teta hover:underline">
             {SITE.email}
           </a>{" "}
@@ -54,6 +57,7 @@ const Terms = () => (
       </section>
     </div>
   </article>
-);
+  );
+};
 
 export default Terms;

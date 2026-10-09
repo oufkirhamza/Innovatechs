@@ -9,6 +9,7 @@ import {
 import Logo from "../components/Logo";
 import NavAnchor from "../components/NavAnchor";
 import { SITE, SOCIAL } from "../constants/site";
+import { useLocale } from "../i18n/locale";
 import { SERVICES } from "../data/services";
 
 const NAV_LINKS = [
@@ -27,7 +28,8 @@ const SOCIAL_LINKS = [
 ].filter((item) => item.href);
 
 const Footer = () => {
-  const whatsappHref = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent("Hi Innovatechs!")}`;
+  const { t, to } = useLocale();
+  const whatsappHref = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(t.contact.whatsappText)}`;
 
   const backToTop = () => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -39,12 +41,11 @@ const Footer = () => {
       <div className="shell py-14 lg:py-16">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
-            <Link to="/" className="flex w-fit items-center gap-2.5 text-left">
-              <Logo className="h-8 w-8 shrink-0" />
-              <span className="text-lg font-semibold tracking-tight">{SITE.name}</span>
+            <Link to={to("/")} className="flex w-fit items-center">
+              <Logo variant="lockup" className="h-12 w-auto" alt={SITE.name} />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              {SITE.tagline}
+              {t.meta.description}
             </p>
             {SOCIAL_LINKS.length > 0 && (
               <div className="mt-5 flex gap-2">
@@ -68,10 +69,10 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-2">
-            <p className="eyebrow">Navigate</p>
-            <nav aria-label="Footer navigation" className="mt-4 flex flex-col gap-2.5">
-              <Link to="/work" className="w-fit text-sm text-ink/85 transition-colors hover:text-teta">
-                Work
+            <p className="eyebrow">{t.footer.navigate}</p>
+            <nav aria-label={t.a11y.footerNav} className="mt-4 flex flex-col gap-2.5">
+              <Link to={to("/work")} className="w-fit text-sm text-ink/85 transition-colors hover:text-teta">
+                {t.nav.work}
               </Link>
               {NAV_LINKS.map((link) => (
                 <NavAnchor
@@ -79,14 +80,14 @@ const Footer = () => {
                   sectionId={link.id}
                   className="w-fit text-sm text-ink/85 transition-colors hover:text-teta"
                 >
-                  {link.label}
+                  {t.nav[link.id === "about" ? "about" : link.id]}
                 </NavAnchor>
               ))}
             </nav>
           </div>
 
           <div className="lg:col-span-2">
-            <p className="eyebrow">Services</p>
+            <p className="eyebrow">{t.footer.services}</p>
             <ul className="mt-4 flex flex-col gap-2.5">
               {SERVICES.map((service) => (
                 <li key={service.id}>
@@ -94,7 +95,7 @@ const Footer = () => {
                     sectionId={`service-${service.id}`}
                     className="text-sm text-ink/85 transition-colors hover:text-teta"
                   >
-                    {service.title}
+                    {t.services.items[service.id].title}
                   </NavAnchor>
                 </li>
               ))}
@@ -102,9 +103,9 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-3">
-            <p className="eyebrow">Contact</p>
+            <p className="eyebrow">{t.footer.contact}</p>
             <ul className="mt-4 space-y-2.5 text-sm text-ink/85">
-              <li>{SITE.location}</li>
+              <li>{t.footer.location}</li>
               <li>
                 <a href={`mailto:${SITE.email}`} className="break-all transition-colors hover:text-teta">
                   {SITE.email}
@@ -122,7 +123,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-teta"
                 >
-                  WhatsApp
+                  {t.contact.whatsapp}
                 </a>
               </li>
             </ul>
@@ -133,17 +134,17 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="shell flex flex-col items-start justify-between gap-3 py-5 text-[13px] text-muted sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+            © {new Date().getFullYear()} {SITE.name}. {t.footer.rights}
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <Link to="/privacy" className="transition-colors hover:text-teta">
-              Privacy Policy
+            <Link to={to("/privacy")} className="transition-colors hover:text-teta">
+              {t.footer.privacy}
             </Link>
-            <Link to="/terms" className="transition-colors hover:text-teta">
-              Terms of Service
+            <Link to={to("/terms")} className="transition-colors hover:text-teta">
+              {t.footer.terms}
             </Link>
             <button type="button" onClick={backToTop} className="transition-colors hover:text-teta">
-              Back to top
+              {t.footer.top}
             </button>
           </div>
         </div>

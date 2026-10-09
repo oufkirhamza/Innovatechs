@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,6 +13,9 @@
     font-family: 'Poppins', system-ui, 'sans-serif';
     @apply bg-alpha text-ink antialiased;
     overflow-x: clip;
+  }
+  html[dir="rtl"] body {
+    font-family: "Noto Sans Arabic", "Poppins", system-ui, sans-serif;
   }
   :focus-visible {
     outline: 2px solid #5c45fd;
@@ -71,6 +74,7 @@
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1;
+    border-radius: 10px;
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   }
 
@@ -300,4 +304,8 @@
     transform: none;
     transition: none;
   }
+}
+
+html[dir="rtl"] .text-left {
+  text-align: right;
 }

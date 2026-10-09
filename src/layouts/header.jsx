@@ -1,20 +1,101 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { MdArrowOutward, MdClose } from "react-icons/md";
+import { MdArrowOutward, MdClose, MdKeyboardArrowDown, MdLanguage } from "react-icons/md";
 import { TbMenu2 } from "react-icons/tb";
 import Logo from "../components/Logo";
 import NavAnchor from "../components/NavAnchor";
 import { scrollToSection } from "../utils/scrollToSection";
 import { trackEvent } from "../utils/analytics";
-import { SITE } from "../constants/site";
+import { LOCALE_CODES, LOCALE_NAMES, stripLocale, useLocale } from "../i18n/locale";
 
 const NAV_ITEMS = [
-  { id: "work", label: "Work", to: "/work" },
-  { id: "services", label: "Services" },
-  { id: "about", label: "Why Us" },
-  { id: "process", label: "Process" },
-  { id: "contact", label: "Contact" },
+  { id: "work", key: "work", to: "/work" },
+  { id: "services", key: "services" },
+  { id: "about", key: "about" },
+  { id: "process", key: "process" },
+  { id: "contact", key: "contact" },
 ];
+
+const LanguageSwitch = ({ id, className = "", onNavigate, collapsed = false }) => {
+  const { lang, t, switchTo } = useLocale();
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    if (collapsed) setOpen(false);
+  }, [collapsed]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const onPointer = (event) => {
+      if (!rootRef.current?.contains(event.target)) setOpen(false);
+    };
+    const onKey = (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        buttonRef.current?.focus();
+      }
+    };
+    document.addEventListener("mousedown", onPointer);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onPointer);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  return (
+    <div ref={rootRef} className={`relative ${className}`}>
+      <button
+        ref={buttonRef}
+        type="button"
+        className="inline-flex h-10 items-center gap-1.5 whitespace-nowrap rounded-[10px] border border-white/15 px-2.5 text-[13px] text-ink transition-colors hover:border-white/40 lg:gap-2 lg:px-3"
+        aria-label={`${t.a11y.language}: ${LOCALE_NAMES[lang]}`}
+        aria-expanded={open}
+        aria-controls={id}
+        onClick={() => setOpen((value) => !value)}
+      >
+        <MdLanguage aria-hidden className="text-[18px] text-muted" />
+        <span>{t.a11y.language}</span>
+        <MdKeyboardArrowDown
+          aria-hidden
+          className={`text-base text-muted transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      <div
+        id={id}
+        role="group"
+        aria-label={t.a11y.language}
+        className={`absolute end-0 top-[calc(100%+8px)] z-50 min-w-[180px] overflow-hidden rounded-[10px] border border-white/15 bg-[#1c1928] py-1 ${
+          open ? "" : "hidden"
+        }`}
+      >
+        {LOCALE_CODES.map((code) => {
+          const selected = code === lang;
+          return (
+            <Link
+              key={code}
+              to={switchTo(code)}
+              hrefLang={code}
+              lang={code}
+              aria-current={selected ? "true" : undefined}
+              onClick={() => {
+                setOpen(false);
+                onNavigate?.();
+              }}
+              className={`block px-3 py-2.5 text-[13px] transition-colors hover:bg-white/[0.04] ${
+                selected ? "text-teta" : "text-ink"
+              }`}
+            >
+              {LOCALE_NAMES[code]}
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,27 +104,29 @@ const Header = () => {
   const panelRef = useRef(null);
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const { t, to, isHome } = useLocale();
+  const barePath = stripLocale(pathname);
 
   const closeMenu = () => setIsOpen(false);
 
   const goHome = () => {
     closeMenu();
-    if (pathname === "/") {
+    if (isHome) {
       scrollToSection("hero");
       return;
     }
-    navigate("/");
+    navigate(to("/"));
   };
 
   const talk = (location) => {
     trackEvent("cta_click", { location, label: "lets_talk" });
     closeMenu();
-    if (pathname === "/") {
+    if (isHome) {
       scrollToSection("contact");
       document.getElementById("contact")?.focus({ preventScroll: true });
       return;
     }
-    navigate("/#contact");
+    navigate(to("/#contact"));
   };
 
   const linkClass = (active) =>
@@ -117,45 +200,46 @@ const Header = () => {
         <button
           type="button"
           onClick={goHome}
-          className="flex items-center gap-2.5 justify-self-start"
-          aria-label={`${SITE.name} home`}
+          className="flex min-w-0 items-center gap-2.5 justify-self-start"
+          aria-label={t.a11y.home}
         >
-          <Logo className="h-8 w-8" />
-          <span className="text-[15px] font-semibold tracking-tight">{SITE.name}</span>
+          <Logo variant="mark" className="h-9 w-9 shrink-0 min-[380px]:hidden" />
+          <Logo variant="lockup" className="hidden h-7 w-auto shrink-0 min-[380px]:block lg:h-10" />
         </button>
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label={t.a11y.mainNav} className="hidden items-center gap-7 lg:flex">
           {NAV_ITEMS.map((item) =>
             item.to ? (
               <Link
                 key={item.id}
-                to={item.to}
-                className={linkClass(pathname.startsWith(item.to))}
-                aria-current={pathname.startsWith(item.to) ? "page" : undefined}
+                to={to(item.to)}
+                className={linkClass(barePath.startsWith(item.to))}
+                aria-current={barePath.startsWith(item.to) ? "page" : undefined}
               >
-                {item.label}
+                {t.nav[item.key]}
               </Link>
             ) : (
               <NavAnchor key={item.id} sectionId={item.id} className={linkClass(false)}>
-                {item.label}
+                {t.nav[item.key]}
               </NavAnchor>
             )
           )}
         </nav>
 
-        <div className="flex items-center gap-2 justify-self-end">
+        <div className="flex shrink-0 items-center gap-2 justify-self-end lg:gap-3">
+          <LanguageSwitch id="language-menu" />
           <button
             type="button"
             onClick={() => talk("header")}
             className="btn btn-primary btn-sm hidden md:inline-flex"
           >
-            Let&apos;s talk <MdArrowOutward aria-hidden />
+            {t.nav.talk} <MdArrowOutward aria-hidden />
           </button>
           <button
             ref={menuButtonRef}
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center border border-white/15 lg:hidden"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-[10px] border border-white/15 lg:hidden"
+            aria-label={isOpen ? t.a11y.closeMenu : t.a11y.openMenu}
             aria-expanded={isOpen}
             aria-controls="mobile-nav"
             onClick={() => setIsOpen((open) => !open)}
@@ -174,17 +258,17 @@ const Header = () => {
         }`}
         aria-hidden={!isOpen}
       >
-        <nav aria-label="Mobile navigation" className="shell flex h-full flex-col pt-6">
+        <nav aria-label={t.a11y.mobileNav} className="shell flex h-full flex-col pt-6">
           {NAV_ITEMS.map((item) =>
             item.to ? (
               <Link
                 key={item.id}
-                to={item.to}
+                to={to(item.to)}
                 onClick={closeMenu}
                 className="border-b border-white/10 py-4 text-[28px] font-medium tracking-tight"
-                aria-current={pathname.startsWith(item.to) ? "page" : undefined}
+                aria-current={barePath.startsWith(item.to) ? "page" : undefined}
               >
-                {item.label}
+                {t.nav[item.key]}
               </Link>
             ) : (
               <NavAnchor
@@ -193,7 +277,7 @@ const Header = () => {
                 onNavigate={closeMenu}
                 className="border-b border-white/10 py-4 text-[28px] font-medium tracking-tight"
               >
-                {item.label}
+                {t.nav[item.key]}
               </NavAnchor>
             )
           )}
@@ -202,7 +286,7 @@ const Header = () => {
             onClick={() => talk("mobile_menu")}
             className="btn btn-primary mt-8 w-full"
           >
-            Let&apos;s talk <MdArrowOutward aria-hidden />
+            {t.nav.talk} <MdArrowOutward aria-hidden />
           </button>
         </nav>
       </div>

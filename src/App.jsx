@@ -11,6 +11,8 @@ import Footer from "./layouts/footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import SkipToContent from "./components/SkipToContent";
 import StructuredData from "./components/StructuredData";
+import LocaleProvider from "./i18n/LocaleProvider";
+import { stripLocale } from "./i18n/locale";
 import { initAnalytics } from "./utils/analytics";
 import { scrollToSection } from "./utils/scrollToSection";
 
@@ -18,7 +20,7 @@ const HashScrollHandler = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (pathname === "/" && hash) {
+    if (stripLocale(pathname) === "/" && hash) {
       const id = hash.replace("#", "");
       const timer = window.setTimeout(() => scrollToSection(id), 80);
       return () => window.clearTimeout(timer);
@@ -31,18 +33,25 @@ const HashScrollHandler = () => {
 };
 
 function App() {
+  const location = useLocation();
+
   useEffect(() => {
     initAnalytics();
   }, []);
 
+  const routedLocation = {
+    ...location,
+    pathname: stripLocale(location.pathname),
+  };
+
   return (
-    <>
+    <LocaleProvider>
       <SkipToContent />
       <StructuredData />
       <HashScrollHandler />
       <Header />
       <main id="main">
-        <Routes>
+        <Routes location={routedLocation}>
           <Route path="/" element={<HomePage />} />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/work/:slug" element={<ProjectPage />} />
@@ -53,7 +62,7 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton />
-    </>
+    </LocaleProvider>
   );
 }
 
