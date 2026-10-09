@@ -1,74 +1,252 @@
-import React from 'react';
+import { useState } from "react";
+import { Section } from "../../../components/Section";
+import { trackEvent } from "../../../utils/analytics";
+import { SITE } from "../../../constants/site";
 
-import Star from "../../../components/strar";
+const FORMSPREE_ID = process.env.REACT_APP_FORMSPREE_FORM_ID;
+const CALENDLY_URL = process.env.REACT_APP_CALENDLY_URL;
+const formDeliveryConfigured =
+  Boolean(FORMSPREE_ID) && FORMSPREE_ID !== "your_form_id";
 
 export const Contact = () => {
-    return (
-        <section>
-            <div className="bg-alpha lg:px-52 px-10 text-white  relative overflow-x-hidden overflow-y-hidden">
-                <div className="bluri absolute -left-64 top-16 w-[300px] h-[300px] rounded-full"></div>
-                <div className="bluri absolute -right-72 bottom-20 w-[400px] h-[300px] rounded-full"></div>
-                <h1 className="text-teta tracking-wider">C O N T A C T &nbsp; U S</h1>
-                <div className="text-4xl lg:flex items-center gap-3 py-5">
-                    <h1>Let's Collaborate</h1><Star className="w-10" />
+  const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [mailtoHref, setMailtoHref] = useState(`mailto:${SITE.email}`);
+
+  const whatsappHref = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
+    "Hi Innovatechs! I'd like to discuss a project."
+  )}`;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const name = formData.get("name")?.toString().trim();
+    const email = formData.get("email")?.toString().trim();
+    const phone = formData.get("phone")?.toString().trim();
+    const message = formData.get("message")?.toString().trim();
+
+    if (!name || !email || !message) {
+      setStatus("error");
+      setErrorMessage("Please fill in your name, email, and message.");
+      return;
+    }
+
+    if (!formDeliveryConfigured) {
+      const subject = encodeURIComponent(`Project inquiry from ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\n\n${message}`
+      );
+      setStatus("fallback");
+      setErrorMessage("");
+      setMailtoHref(`mailto:${SITE.email}?subject=${subject}&body=${body}`);
+      trackEvent("form_submit", { method: "fallback_shown" });
+      return;
+    }
+
+    setStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+
+      setStatus("success");
+      trackEvent("form_submit", { method: "formspree" });
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(
+        err.message || "Could not send your message. Please try again."
+      );
+    }
+  };
+
+  return (
+    <Section id="contact">
+      <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+        <div>
+          <h2 className="text-[34px] font-semibold leading-[1.05] tracking-[-0.035em] sm:text-[44px] lg:text-[50px]">
+            Tell us what you&apos;re building.
+          </h2>
+          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted sm:text-[16px]">
+            Describe the idea, the problem, or the system you want to improve. We&apos;ll reply
+            with a practical next step.
+          </p>
+          <ul className="mt-8 border-t border-white/[0.11]">
+            <li className="border-b border-white/[0.11] py-4">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-muted">Email</p>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="mt-1 inline-block break-all text-[15px] transition-colors hover:text-teta"
+              >
+                {SITE.email}
+              </a>
+            </li>
+            <li className="border-b border-white/[0.11] py-4">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-muted">Phone</p>
+              <a
+                href={`tel:${SITE.phone}`}
+                className="mt-1 inline-block text-[15px] transition-colors hover:text-teta"
+              >
+                {SITE.phoneDisplay}
+              </a>
+            </li>
+            <li className="border-b border-white/[0.11] py-4">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-muted">WhatsApp</p>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 inline-block text-[15px] transition-colors hover:text-teta"
+              >
+                Message {SITE.name}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div aria-live="polite">
+            {status === "success" && (
+              <div
+                className="mb-6 border border-emerald-500/40 bg-emerald-500/10 p-5"
+                role="status"
+              >
+                <p className="font-semibold text-emerald-300">Message sent</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  Thanks for reaching out. We&apos;ll follow up to discuss next steps.
+                  {CALENDLY_URL && " You can also book a call below."}
+                </p>
+              </div>
+            )}
+
+            {status === "fallback" && (
+              <div className="mb-6 border border-teta/40 bg-teta/10 p-5" role="status">
+                <p className="font-semibold">Reach us directly by email or WhatsApp</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  Online form delivery is not configured yet. Please contact us using one of the
+                  options below — we will discuss next steps with you.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <a href={mailtoHref} className="btn btn-primary btn-sm">
+                    Open email draft
+                  </a>
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary btn-sm"
+                  >
+                    WhatsApp
+                  </a>
                 </div>
+              </div>
+            )}
+          </div>
 
-                <div>
-                    <div className=''>
-                        <div className='   my-10 w-[96%] h-[92%] bg-opacity-60 flex  items-center justify-center' >
-                            <form action="">
-                                <div className='flex w-[100%]  gap-6 text-white'>
-                                    <div className=' flex flex-col '>
-                                        <label htmlFor="" className=' pb-1 text-xl  pl-2'>Full Name</label>
-                                        <input type="text" className='bg-transparent outline-none lg:w-[30vw]  px-2 py-3 border rounded-xl ' placeholder='Joe hernandez' />
-                                    </div>
-                                    <div className=' flex flex-col '>
-                                        <label htmlFor="" className=' pb-1 text-xl  pl-2'>Phone Number</label>
-                                        <input type="number" className='bg-transparent outline-none lg:w-[30vw]  px-2 py-3 border rounded-xl ' placeholder='0623xxxxxxx' />
-                                    </div>
-                                </div>
-                                <div className='w-[100%] flex flex-col'>
-                                    <label className='mt-8    pb-1 text-xl pl-2 '  >Message</label>
-                                    <textarea className='lg:w-[100%] lg:h-[20vh] bg-transparent   outline-none p-2 border rounded-xl' placeholder='Message ...' name="" id=""></textarea>
-                                </div>
-                                <button className=' translate-x-4 border px-6 my-8 py-2 text-lg rounded-lg bg-opacity-45 hover:bg-opacity-100'> Send</button>
-
-
-                            </form>
-
-                        </div>
-                        {/* <iframe className='my-8' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37786.11888803124!2d-7.543890609778514!3d33.594187543622354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cc9b5ed39c01%3A0x4db6f1381ccf8d63!2sAIN%20SBAA%2C%20Casablanca!5e1!3m2!1sfr!2sma!4v1724324774773!5m2!1sfr!2sma" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
-                    </div>
-                </div>
-
-
-
-
-
-                {/* <div class="flex pb-20 pt-6 items-center justify-start ">
-                    <div class="mx-auto w-full px-20">
-                        <form action="" class="">
-                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-                            <div class="grid gap-6 sm:grid-cols-2">
-                                <div class="relative z-0">
-                                    <input type="text" name="name" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
-                                    <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your name</label>
-                                </div>
-                                <div class="relative z-0">
-                                    <input type="text" name="email" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
-                                    <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your email</label>
-                                </div>
-                                <div class="relative z-0 col-span-2">
-                                    <textarea name="message" rows="5" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" "></textarea>
-                                    <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your message</label>
-                                </div>
-                            </div>
-                            <button type="submit" class="mt-5 rounded-md bg-black px-10 py-2 text-white">Send Message</button>
-                        </form>
-                    </div>
-                </div> */}
+          <form onSubmit={handleSubmit} noValidate>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label htmlFor="contact-name" className="field-label">
+                  Name <span className="text-teta">*</span>
+                </label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  required
+                  autoComplete="name"
+                  className="field"
+                  placeholder="Your name"
+                  aria-invalid={status === "error"}
+                />
+              </div>
+              <div>
+                <label htmlFor="contact-email" className="field-label">
+                  Email <span className="text-teta">*</span>
+                </label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  required
+                  autoComplete="email"
+                  className="field"
+                  placeholder="you@company.com"
+                  aria-invalid={status === "error"}
+                />
+              </div>
             </div>
-        </section>
-    );
-};
+            <div className="mt-5">
+              <label htmlFor="contact-phone" className="field-label">
+                Phone <span className="text-muted">(optional)</span>
+              </label>
+              <input
+                id="contact-phone"
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                className="field"
+                placeholder="+212 6XX XXX XXX"
+              />
+            </div>
+            <div className="mt-5">
+              <label htmlFor="contact-message" className="field-label">
+                Message <span className="text-teta">*</span>
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                required
+                rows={5}
+                className="field min-h-[140px] resize-y"
+                placeholder="What would you like to build or improve?"
+                aria-invalid={status === "error"}
+              />
+            </div>
 
+            {status === "error" && (
+              <p className="mt-4 text-sm text-red-400" role="alert">
+                {errorMessage}
+              </p>
+            )}
+
+            <button
+              type="submit"
+              disabled={status === "submitting"}
+              className="btn btn-primary mt-6 w-full sm:w-auto"
+            >
+              {status === "submitting" ? "Sending…" : "Send message"}
+            </button>
+            <p className="mt-4 text-[13px] leading-relaxed text-muted">
+              By submitting, you agree we may use your details to respond to your inquiry. We do
+              not sell your data to third parties.
+            </p>
+          </form>
+        </div>
+      </div>
+
+      {CALENDLY_URL && (
+        <div className="mt-14 max-w-xl">
+          <h3 className="text-xl font-semibold">Prefer a call?</h3>
+          <iframe
+            title="Book a meeting with Innovatechs"
+            src={CALENDLY_URL}
+            className="mt-4 h-[520px] w-full border border-white/15"
+            loading="lazy"
+          />
+        </div>
+      )}
+    </Section>
+  );
+};

@@ -1,0 +1,18 @@
+{
+  "short_name": "Innovatechs",
+  "name": "Innovatechs | Websites, Custom Software & AI Automation",
+  "description": "Websites, custom applications and practical AI automations for businesses in Morocco and beyond.",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#191627",
+  "background_color": "#191627",
+  "lang": "en"
+}

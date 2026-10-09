@@ -1,79 +1,94 @@
-import React from "react";
-import Star from "../../../components/strar";
-import desktop from "../../../assets/img/Desktop.png";
-import favories from "../../../assets/img/Fav.png";
-import flag from "../../../assets/img/Flag.png";
-import message from "../../../assets/img/Message.png";
-import navigation from "../../../assets/img/Navigation.png";
-import trophy from "../../../assets/img/Trophy.png";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import { useState } from "react";
+import { MdArrowOutward } from "react-icons/md";
+import { Section, Eyebrow } from "../../../components/Section";
+import { SERVICES } from "../../../data/services";
+import { scrollToSection } from "../../../utils/scrollToSection";
 
 export const ServiceSection = () => {
-  const services = [
-    {
-      title: "Expertise in Figma-to-Webflow",
-      description:
-        "We have a proven track record and expertise in seamlessly turning Figma designs into functional Webflow websites.",
-      icon: trophy,
-    },
-    {
-      title: "On-Page SEO Excellence",
-      description:
-        "We have a proven track record and expertise in seamlessly turning Figma designs into functional Webflow websites.",
-      icon: favories,
-    },
-    {
-      title: "Interactive Magic",
-      description:
-        "We have a proven track record and expertise in seamlessly turning Figma designs into functional Webflow websites.",
-      icon: desktop,
-    },
-    {
-      title: "Dedicated Project Manager",
-      description:
-        "We have a proven track record and expertise in seamlessly turning Figma designs into functional Webflow websites.",
-      icon: message,
-    },
-    {
-      title: "Comprehensive Testing",
-      description:
-        "We have a proven track record and expertise in seamlessly turning Figma designs into functional Webflow websites.",
-      icon: navigation,
-    },
-    {
-      title: "Timely Delivery",
-      description:
-        "We have a proven track record and expertise in seamlessly turning Figma designs into functional Webflow websites.",
-      icon: flag,
-    },
-  ];
+  const [openId, setOpenId] = useState(null);
+
+  const discuss = () => {
+    scrollToSection("contact");
+    window.setTimeout(() => {
+      document.getElementById("contact-message")?.focus({ preventScroll: true });
+    }, 400);
+  };
+
   return (
-    <div className="bg-alpha px-10 lg:px-52 text-white py-8 relative overflow-x-hidden">
-      <div className="bluri absolute -right-72 top-16 w-[400px] h-[300px] rounded-full"></div>
-      <div className="bluri absolute -left-64 bottom-12 w-[300px] h-[300px] rounded-full"></div>
-        <Star className='absolute right-[40vw] top-24 w-3 hidden lg:flex'/>
-      <h1 className="text-teta tracking-wider">S E R V I C E</h1>
-      <div className="text-4xl flex items-center gap-3 py-5">
-        <h1>Exceeding Expectations</h1> <Star className="w-10" />
+    <Section id="services">
+      <Eyebrow>02 / What we do</Eyebrow>
+      <h2 className="mt-4 max-w-[14ch] text-[34px] font-semibold leading-[1.05] tracking-[-0.035em] sm:text-[44px] lg:text-[52px]">
+        From first idea
+        <span className="block">to finished product.</span>
+      </h2>
+
+      <div className="mt-12 border-t border-white/[0.11] lg:mt-16">
+        {SERVICES.map((service) => {
+          const open = openId === service.id;
+          const panelId = `service-panel-${service.id}`;
+          return (
+            <article
+              key={service.id}
+              id={`service-${service.id}`}
+              tabIndex={-1}
+              className="scroll-mt-[84px] border-b border-white/[0.11] outline-none"
+            >
+              <h3>
+                <button
+                  type="button"
+                  aria-expanded={open}
+                  aria-controls={panelId}
+                  onClick={() => setOpenId(open ? null : service.id)}
+                  className={`group grid w-full grid-cols-[auto_1fr_auto] items-start gap-x-4 gap-y-2 py-7 text-left transition-colors sm:gap-x-6 lg:py-8 ${
+                    open ? "bg-white/[0.03]" : "hover:bg-white/[0.03]"
+                  }`}
+                >
+                  <span className="pt-2 text-[13px] tracking-[0.14em] text-teta">
+                    {service.number}
+                  </span>
+                  <span className="text-[24px] font-semibold tracking-[-0.03em] transition-colors group-hover:text-teta sm:text-[28px]">
+                    {service.title}
+                  </span>
+                  <MdArrowOutward
+                    aria-hidden
+                    className={`mt-2 text-xl transition-transform duration-300 group-hover:translate-x-1 group-hover:text-teta ${
+                      open ? "translate-x-1 text-teta" : ""
+                    }`}
+                  />
+                  <span className="col-start-2 max-w-xl text-[15px] leading-relaxed text-muted">
+                    {service.description}
+                  </span>
+                </button>
+              </h3>
+              <div
+                id={panelId}
+                role="region"
+                aria-label={service.title}
+                className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                  open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                }`}
+              >
+                <div className="overflow-hidden" aria-hidden={!open}>
+                  <div className="grid grid-cols-[auto_1fr] gap-x-4 pb-7 sm:gap-x-6">
+                    <span className="w-6 sm:w-7" aria-hidden />
+                    <div className="max-w-xl">
+                      <p className="text-[15px] leading-relaxed text-muted">{service.detail}</p>
+                      <button
+                        type="button"
+                        onClick={discuss}
+                        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-teta"
+                        tabIndex={open ? 0 : -1}
+                      >
+                        Discuss this service <MdArrowOutward aria-hidden />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
-      <p>
-        We're not just another agency; we're your path to exceptional web
-        projects.
-      </p>
-      <div className="flex flex-col lg:flex-row gap-6 flex-wrap py-7 justify-center">
-        {services.map((element, index) => (
-          <div key={index} className="p-4 lg:w-[30%] flex flex-col gap-3 border border-[#f5f5f595] bg-[#f5f5f517] rounded">
-            <div className="bg-[#f5f5f54c] w-[30%] rounded-lg">
-              <img className="" src={element.icon} alt="" />
-            </div>
-            <h1 className="text-xl">{element.title}</h1>
-            <p className="text-[#f5f5f5b4] text-sm">{element.description}</p>
-            <div className="border rounded-lg border-delta p-3 w-fit text-3xl cursor-pointer hover:bg-delta hover:text-alpha">
-              <IoIosArrowRoundForward />
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    </Section>
   );
 };

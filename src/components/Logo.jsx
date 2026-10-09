@@ -1,0 +1,18 @@
+const Logo = ({ className = "w-8 h-8" }) => (
+  <svg
+    viewBox="0 0 32 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    aria-hidden
+  >
+    <rect width="32" height="32" rx="8" fill="#5c45fd" />
+    <path
+      d="M16 6L20 14H26L21 19L23 27L16 22L9 27L11 19L6 14H12L16 6Z"
+      fill="#fff"
+      opacity="0.95"
+    />
+  </svg>
+);
+
+export default Logo;
