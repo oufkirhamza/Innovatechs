@@ -55,17 +55,15 @@ const Action = ({ project, label, className = "" }) => {
   );
 };
 
-const Preview = ({ project, label, className = "", imageFirst = false }) => {
+const Preview = ({ project, label, className = "" }) => {
   const { to } = useLocale();
   return (
   <Link
     to={to(projectPath(project))}
     aria-label={`${label}: ${project.title}`}
-    className={`relative block w-full overflow-hidden text-left ${className}`}
+    className={`block w-full text-left ${className}`}
   >
-    <div className="project-zoom absolute inset-0" aria-hidden>
-      <ProjectPreview project={project} imageFirst={imageFirst} />
-    </div>
+    <ProjectPreview project={project} />
   </Link>
   );
 };
@@ -132,9 +130,9 @@ export const WorkSection = () => {
               <Preview
                 project={featured}
                 label={labelFor(featured)}
-                className="h-full min-h-[300px] sm:min-h-[440px] lg:min-h-[560px]"
+                className="border-b border-white/[0.11] lg:border-b-0 lg:border-r"
               />
-              <div className="border-t border-white/[0.11] lg:border-l lg:border-t-0">
+              <div>
                 <ProjectCopy project={featured} label={labelFor(featured)} showHeadline />
               </div>
             </div>
@@ -151,9 +149,9 @@ export const WorkSection = () => {
                 <Preview
                   project={project}
                   label={labelFor(project)}
-                  className="min-h-[260px] sm:min-h-[340px] lg:min-h-[400px]"
+                  className="border-b border-white/[0.11]"
                 />
-                <div className="flex flex-1 flex-col border-t border-white/[0.11]">
+                <div className="flex flex-1 flex-col">
                   <ProjectCopy project={project} label={labelFor(project)} />
                 </div>
               </article>

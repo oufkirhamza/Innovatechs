@@ -55,7 +55,16 @@ function Shot({ project, position = "object-top", priority = false }) {
 }
 
 export function ProjectPreview({ project, priority = false }) {
-  return <Shot project={project} priority={priority} />;
+  if (!project) return null;
+  return (
+    <img
+      src={project.image}
+      alt=""
+      className="block h-auto w-full"
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+    />
+  );
 }
 
 export function HeroComposition() {

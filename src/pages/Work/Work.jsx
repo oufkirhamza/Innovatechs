@@ -64,13 +64,11 @@ const WorkPage = () => {
                 </span>
               </div>
               <div
-                className={`relative min-h-[240px] overflow-hidden border border-white/[0.11] sm:min-h-[320px] lg:min-h-[380px] ${
+                className={`overflow-hidden border border-white/[0.11] ${
                   index % 2 === 1 ? "lg:order-1" : ""
                 }`}
               >
-                <div className="project-zoom absolute inset-0" aria-hidden>
-                  <ProjectPreview project={project} />
-                </div>
+                <ProjectPreview project={project} />
               </div>
             </Link>
           </article>

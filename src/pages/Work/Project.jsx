@@ -61,7 +61,7 @@ const ProjectPage = () => {
         </div>
       </div>
 
-      <div className="mt-10 h-[280px] overflow-hidden border border-white/[0.11] sm:h-[420px] lg:mt-14 lg:h-[560px]">
+      <div className="mt-10 overflow-hidden border border-white/[0.11] lg:mt-14">
         <ProjectPreview project={project} priority />
       </div>
 

@@ -104,7 +104,7 @@ const ProjectDialog = ({ project, onClose }) => {
             This preview shows the kind of experience we design. It is not a completed client project.
           </p>
 
-          <div className="mt-6 h-[280px] overflow-hidden border border-white/10 sm:h-[380px]">
+          <div className="mt-6 overflow-hidden border border-white/10">
             <ProjectPreview project={project} />
           </div>
 
