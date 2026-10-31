@@ -97,9 +97,8 @@ export const WorkSection = () => {
   const { t, to } = useLocale();
   const labelFor = (project) => (project.liveUrl ? t.work.viewLive : t.work.explore);
   const withCopy = (project) => ({ ...project, ...t.projects[project.id] });
-  const featured = PROJECTS.filter((project) => project.layout === "feature").map(withCopy)[0];
-  const paired = PROJECTS.filter((project) => project.layout === "pair").map(withCopy);
-  const wide = PROJECTS.filter((project) => project.layout === "wide").map(withCopy);
+  const featured = PROJECTS.filter((project) => project.featured).map(withCopy)[0];
+  const paired = PROJECTS.filter((project) => !project.featured).map(withCopy);
 
   return (
     <Section id="work">
@@ -161,24 +160,6 @@ export const WorkSection = () => {
             ))}
           </div>
         )}
-
-        {wide.map((project) => (
-          <article
-            key={project.id}
-            className="group border border-white/[0.11] transition-colors duration-300 hover:border-white/25"
-          >
-            <div className="grid lg:grid-cols-[0.82fr_1.35fr]">
-              <div className="order-2 border-t border-white/[0.11] lg:order-1 lg:border-r lg:border-t-0">
-                <ProjectCopy project={project} label={labelFor(project)} />
-              </div>
-              <Preview
-                project={project}
-                label={labelFor(project)}
-                className="order-1 h-full min-h-[280px] sm:min-h-[400px] lg:order-2 lg:min-h-[500px]"
-              />
-            </div>
-          </article>
-        ))}
       </div>
 
       </Section>

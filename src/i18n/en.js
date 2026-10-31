@@ -45,7 +45,7 @@ const en = {
     title1: "Digital experiences.",
     title2: "Built to make an impact.",
     intro: "A glimpse into the kinds of digital products we design and develop.",
-    label: "Concepts & selected demos",
+    label: "Live demos",
     viewAll: "View all work",
     explore: "Explore concept",
     viewLive: "View live demo",
@@ -53,7 +53,7 @@ const en = {
     pageEyebrow: "Work",
     pageTitle: "The websites we make.",
     pageIntro:
-      "A closer look at the sites and product studies in the studio. A public address appears only when a site is actually live. Everything else is labeled as a concept.",
+      "A closer look at the live demos in the studio. Open any project to see the site.",
     pageCta: "Have a site in mind? Tell us what you want it to do.",
     documentTitle: "Work | Innovatechs",
     back: "← All work",
@@ -281,55 +281,119 @@ const en = {
   projects: {
     "maison-nera": {
       category: "Beauty & E-commerce",
-      status: "Concept Demo",
-      headline: "A more beautiful way to shop.",
+      status: "Live demo",
+      headline: "Beauty, shaped by hand.",
       description:
-        "A refined handmade cosmetics shopping experience with product discovery, cart management, and WhatsApp ordering.",
-      tags: ["E-commerce", "UI Design", "WhatsApp Commerce"],
+        "A handmade cosmetics boutique with a calm shop, a care story, and a direct way to get in touch.",
+      tags: ["E-commerce", "Beauty", "Boutique"],
       features: [
-        "Collection browsing and product pages",
-        "Cart management",
-        "WhatsApp ordering from the product",
+        "A shop for small-batch care products",
+        "Brand story and know-how pages",
+        "Contact and WhatsApp from the site",
       ],
+    },
+    solara: {
+      category: "Energy",
+      status: "Live demo",
+      headline: "A brighter way to live.",
+      description:
+        "A solar studio site for homes and businesses, with solutions, a savings estimate, and a quote request.",
+      tags: ["Energy", "Website", "Lead generation"],
+      features: ["Solutions for home and business", "A savings estimate", "A demo quote request"],
+    },
+    "nova-dental": {
+      category: "Healthcare",
+      status: "Live demo",
+      headline: "A thoughtful approach to dentistry.",
+      description:
+        "A dental practice site built around comfort, with services, the team, and a simple visit request.",
+      tags: ["Healthcare", "Website", "Appointments"],
+      features: ["Services and the practice approach", "Team and frequently asked questions", "A request for a visit"],
+    },
+    "lune-events": {
+      category: "Events",
+      status: "Live demo",
+      headline: "An art of celebration.",
+      description:
+        "An editorial site for celebrations, with gatherings, a journal, and a way to start planning.",
+      tags: ["Events", "Editorial", "Website"],
+      features: ["Stories and celebration experiences", "A journal and atelier", "An enquiry to start planning"],
     },
     "rif-drive": {
       category: "Car Rental",
-      status: "Concept",
-      headline: "",
+      status: "Live demo",
+      headline: "Go your own way.",
       description:
-        "An inquiry-focused rental platform with a fleet catalog and intuitive booking journey.",
-      tags: ["Automotive", "Website", "Booking UX"],
+        "A car rental site for the Rif, with a fleet, the story behind the drive, and a way to find a ride.",
+      tags: ["Automotive", "Website", "Booking"],
+      features: ["A fleet you can browse", "The story of driving in the Rif", "A ride enquiry"],
+    },
+    "atelier-beaute": {
+      category: "Beauty Studio",
+      status: "Live demo",
+      headline: "Beauty, on your terms.",
+      description:
+        "A beauty studio site with rituals, selected work, and a booking path for a first visit.",
+      tags: ["Beauty", "Studio", "Booking"],
+      features: ["Services and studio rituals", "A look at the work", "A booking enquiry"],
+    },
+    riffit: {
+      category: "Fitness",
+      status: "Live demo",
+      headline: "Show up. Level up.",
+      description:
+        "A training club site with programs, a weekly schedule, coaches, and a first-session enquiry.",
+      tags: ["Fitness", "Website", "Scheduling"],
       features: [
-        "Fleet catalog with a clear vehicle presentation",
-        "A short booking inquiry, not a fake checkout",
-        "Dates, pickup, and return gathered in one place",
+        "Strength, conditioning, and mobility programs",
+        "A weekly schedule and coach profiles",
+        "A trial-session enquiry",
       ],
     },
-    "atelier-cafe": {
-      category: "Hospitality",
-      status: "Concept",
-      headline: "",
+    morrow: {
+      category: "Beauty & E-commerce",
+      status: "Live demo",
+      headline: "Beauty for every version of you.",
       description:
-        "A digital home for a modern café, combining menus, atmosphere, and simple customer interactions.",
-      tags: ["Hospitality", "Website", "Digital Menu"],
-      features: [
-        "An atmosphere-led homepage",
-        "A digital menu that is easy to scan",
-        "A simple way for guests to get in touch",
-      ],
+        "A shade-inclusive beauty shop with a clear product story and a bag for browsing the range.",
+      tags: ["E-commerce", "Beauty", "Brand"],
+      features: ["A shop built around everyday rituals", "Brand story", "A bag for the range"],
+    },
+    noura: {
+      category: "Fashion & E-commerce",
+      status: "Live demo",
+      headline: "Modest by nature.",
+      description:
+        "A modest-fashion store for hijabs, abayas, and dresses, with collection browsing and checkout.",
+      tags: ["E-commerce", "Fashion", "Catalog"],
+      features: ["Hijabs, abayas, and dresses", "Collection browsing with color options", "Bag and checkout"],
     },
     "rif-living": {
       category: "Real Estate",
-      status: "Concept",
-      headline: "",
+      status: "Live demo",
+      headline: "Find your place in the Rif.",
       description:
-        "A property discovery experience with refined listings, filters, and inquiry-focused interactions.",
-      tags: ["Real Estate", "Listings", "Web Application"],
-      features: [
-        "Large listing layouts",
-        "Filters for browsing properties",
-        "Inquiry instead of an invented purchase flow",
-      ],
+        "A property site for buying or renting in the Rif, with filters for place, type, and budget.",
+      tags: ["Real Estate", "Listings", "Search"],
+      features: ["Homes to buy or rent", "Filters for location, type, and budget", "A path to list a property"],
+    },
+    "furry-friends": {
+      category: "Pets",
+      status: "Live demo",
+      headline: "Give a new life to furry friends.",
+      description:
+        "An adoption and rehoming site with pet search, care guidance, and a clear path for families.",
+      tags: ["Marketplace", "Pets", "Search"],
+      features: ["Adopt or rehome a pet", "Search by name, breed, or city", "Care guide and reviews"],
+    },
+    "miel-et-creme": {
+      category: "Food & Hospitality",
+      status: "Live demo",
+      headline: "A little joy in every layer.",
+      description:
+        "A cake studio site with a product range, the house philosophy, and a custom-cake enquiry.",
+      tags: ["Hospitality", "E-commerce", "Brand"],
+      features: ["A catalog of cakes and sweets", "The studio philosophy", "A custom-cake enquiry"],
     },
   },
 };

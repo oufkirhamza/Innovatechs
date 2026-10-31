@@ -45,7 +45,7 @@ const fr = {
     title1: "Expériences numériques.",
     title2: "Conçues pour laisser une trace.",
     intro: "Un aperçu des produits numériques que nous concevons et développons.",
-    label: "Concepts et démos choisies",
+    label: "Démos en ligne",
     viewAll: "Voir toutes les réalisations",
     explore: "Explorer le concept",
     viewLive: "Voir la démo en ligne",
@@ -53,7 +53,7 @@ const fr = {
     pageEyebrow: "Réalisations",
     pageTitle: "Les sites que nous réalisons.",
     pageIntro:
-      "Un regard plus précis sur les sites et les études de concept du studio. Une adresse publique n'apparaît que lorsqu'un site est réellement en ligne. Le reste est indiqué comme concept.",
+      "Un regard plus précis sur les démos en ligne du studio. Ouvrez un projet pour voir le site.",
     pageCta: "Un site en tête ? Dites-nous ce que vous voulez qu'il fasse.",
     documentTitle: "Réalisations | Innovatechs",
     back: "← Toutes les réalisations",
@@ -283,55 +283,119 @@ const fr = {
   projects: {
     "maison-nera": {
       category: "Beauté et commerce en ligne",
-      status: "Démo concept",
-      headline: "Une façon plus belle de faire ses achats.",
+      status: "Démo en ligne",
+      headline: "La beauté, façonnée à la main.",
       description:
-        "Une expérience d'achat raffinée pour une cosmétique artisanale, avec découverte des produits, gestion du panier et commande par WhatsApp.",
-      tags: ["Commerce en ligne", "Design d'interface", "Commerce WhatsApp"],
+        "Une boutique de cosmétique artisanale, avec une boutique calme, l'histoire des soins et un moyen direct de prendre contact.",
+      tags: ["Commerce en ligne", "Beauté", "Boutique"],
       features: [
-        "Parcours des collections et pages produit",
-        "Gestion du panier",
-        "Commande WhatsApp depuis la fiche produit",
+        "Une boutique de soins en petites séries",
+        "L'histoire de la marque et le savoir-faire",
+        "Contact et WhatsApp depuis le site",
       ],
+    },
+    solara: {
+      category: "Énergie",
+      status: "Démo en ligne",
+      headline: "Une façon plus lumineuse de vivre.",
+      description:
+        "Un site de studio solaire pour les maisons et les entreprises, avec des solutions, une estimation d'économies et une demande de devis.",
+      tags: ["Énergie", "Site web", "Prise de contact"],
+      features: ["Des solutions pour la maison et l'entreprise", "Une estimation des économies", "Une demande de devis"],
+    },
+    "nova-dental": {
+      category: "Santé",
+      status: "Démo en ligne",
+      headline: "Une approche attentive du soin dentaire.",
+      description:
+        "Un site de cabinet dentaire pensé autour du confort, avec les soins, l'équipe et une demande de visite.",
+      tags: ["Santé", "Site web", "Rendez-vous"],
+      features: ["Les soins et l'approche du cabinet", "L'équipe et les questions fréquentes", "Une demande de visite"],
+    },
+    "lune-events": {
+      category: "Événements",
+      status: "Démo en ligne",
+      headline: "Un art de la célébration.",
+      description:
+        "Un site éditorial pour les célébrations, avec des réceptions, un journal et un moyen de commencer à préparer.",
+      tags: ["Événements", "Éditorial", "Site web"],
+      features: ["Des récits et des expériences de célébration", "Un journal et un atelier", "Une demande pour commencer"],
     },
     "rif-drive": {
       category: "Location de voitures",
-      status: "Concept",
-      headline: "",
+      status: "Démo en ligne",
+      headline: "Prenez votre propre route.",
       description:
-        "Une plateforme de location centrée sur la demande, avec un catalogue de véhicules et un parcours de réservation clair.",
-      tags: ["Automobile", "Site web", "Parcours de réservation"],
+        "Un site de location pour le Rif, avec une flotte, l'histoire du trajet et un moyen de trouver une voiture.",
+      tags: ["Automobile", "Site web", "Réservation"],
+      features: ["Une flotte à parcourir", "L'histoire de la route dans le Rif", "Une demande de trajet"],
+    },
+    "atelier-beaute": {
+      category: "Studio beauté",
+      status: "Démo en ligne",
+      headline: "La beauté, à votre façon.",
+      description:
+        "Un site de studio beauté avec des rituels, une sélection de travaux et un parcours pour réserver une première visite.",
+      tags: ["Beauté", "Studio", "Réservation"],
+      features: ["Les services et les rituels du studio", "Un aperçu du travail", "Une demande de réservation"],
+    },
+    riffit: {
+      category: "Fitness",
+      status: "Démo en ligne",
+      headline: "Montrez-vous. Progressez.",
+      description:
+        "Un site de club d'entraînement avec des programmes, un planning, des coachs et une demande de première séance.",
+      tags: ["Fitness", "Site web", "Planning"],
       features: [
-        "Un catalogue de flotte avec une présentation claire de chaque véhicule",
-        "Une demande de réservation courte, sans faux paiement",
-        "Dates, prise en charge et retour réunis au même endroit",
+        "Des programmes de force, de conditionnement et de mobilité",
+        "Un planning hebdomadaire et des profils de coachs",
+        "Une demande de séance d'essai",
       ],
     },
-    "atelier-cafe": {
-      category: "Restauration",
-      status: "Concept",
-      headline: "",
+    morrow: {
+      category: "Beauté et commerce en ligne",
+      status: "Démo en ligne",
+      headline: "La beauté, pour chaque version de vous.",
       description:
-        "Une présence numérique pour un café contemporain, réunissant carte, ambiance et échanges simples avec les clients.",
-      tags: ["Restauration", "Site web", "Menu numérique"],
-      features: [
-        "Une page d'accueil portée par l'ambiance",
-        "Un menu numérique facile à parcourir",
-        "Un moyen simple pour les clients de prendre contact",
-      ],
+        "Une boutique beauté inclusive, avec une histoire de produit claire et un sac pour parcourir la gamme.",
+      tags: ["Commerce en ligne", "Beauté", "Marque"],
+      features: ["Une boutique autour des rituels du quotidien", "L'histoire de la marque", "Un sac pour la gamme"],
+    },
+    noura: {
+      category: "Mode et commerce en ligne",
+      status: "Démo en ligne",
+      headline: "La modestie, par nature.",
+      description:
+        "Une boutique de mode modeste pour hijabs, abayas et robes, avec le parcours des collections et le paiement.",
+      tags: ["Commerce en ligne", "Mode", "Catalogue"],
+      features: ["Hijabs, abayas et robes", "Parcours des collections et des couleurs", "Sac et paiement"],
     },
     "rif-living": {
       category: "Immobilier",
-      status: "Concept",
-      headline: "",
+      status: "Démo en ligne",
+      headline: "Trouvez votre place dans le Rif.",
       description:
-        "Une expérience de recherche de biens, avec des annonces soignées, des filtres et des échanges centrés sur la demande.",
-      tags: ["Immobilier", "Annonces", "Application web"],
-      features: [
-        "Des mises en page généreuses pour les annonces",
-        "Des filtres pour parcourir les biens",
-        "Une demande de contact, plutôt qu'un parcours d'achat inventé",
-      ],
+        "Un site immobilier pour acheter ou louer dans le Rif, avec des filtres de lieu, de type et de budget.",
+      tags: ["Immobilier", "Annonces", "Recherche"],
+      features: ["Des biens à acheter ou à louer", "Des filtres de lieu, de type et de budget", "Un parcours pour publier un bien"],
+    },
+    "furry-friends": {
+      category: "Animaux",
+      status: "Démo en ligne",
+      headline: "Offrez une nouvelle vie à un ami à poils.",
+      description:
+        "Un site d'adoption et de replacement, avec une recherche d'animaux, des conseils et un parcours clair pour les familles.",
+      tags: ["Place de marché", "Animaux", "Recherche"],
+      features: ["Adopter ou confier un animal", "Recherche par nom, race ou ville", "Guide de soins et avis"],
+    },
+    "miel-et-creme": {
+      category: "Gourmandise",
+      status: "Démo en ligne",
+      headline: "Un peu de joie dans chaque couche.",
+      description:
+        "Un site de pâtisserie avec une gamme de gâteaux, la philosophie de la maison et une demande de gâteau sur mesure.",
+      tags: ["Pâtisserie", "Commerce en ligne", "Marque"],
+      features: ["Un catalogue de gâteaux et de douceurs", "La philosophie de la maison", "Une demande de gâteau sur mesure"],
     },
   },
 };

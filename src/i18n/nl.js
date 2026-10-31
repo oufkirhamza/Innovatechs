@@ -45,7 +45,7 @@ const nl = {
     title1: "Digitale ervaringen.",
     title2: "Gemaakt om indruk te maken.",
     intro: "Een blik op het soort digitale producten dat wij ontwerpen en ontwikkelen.",
-    label: "Concepten en geselecteerde demo's",
+    label: "Live demo's",
     viewAll: "Bekijk al het werk",
     explore: "Bekijk het concept",
     viewLive: "Bekijk de live demo",
@@ -53,7 +53,7 @@ const nl = {
     pageEyebrow: "Werk",
     pageTitle: "De websites die wij maken.",
     pageIntro:
-      "Een preciezere blik op de sites en conceptstudies van de studio. Een openbaar adres verschijnt alleen als een site echt live is. Al het andere staat als concept aangeduid.",
+      "Een preciezere blik op de live demo's van de studio. Open een project om de site te bekijken.",
     pageCta: "Een site in gedachten? Vertel ons wat die moet doen.",
     documentTitle: "Werk | Innovatechs",
     back: "← Al het werk",
@@ -282,55 +282,119 @@ const nl = {
   projects: {
     "maison-nera": {
       category: "Beauty en e-commerce",
-      status: "Conceptdemo",
-      headline: "Een mooiere manier om te winkelen.",
+      status: "Live demo",
+      headline: "Schoonheid, met de hand gevormd.",
       description:
-        "Een verfijnde winkelervaring voor handgemaakte cosmetica, met productontdekking, winkelwagen en bestellen via WhatsApp.",
-      tags: ["E-commerce", "Interface-ontwerp", "WhatsApp-commerce"],
+        "Een boutique voor handgemaakte cosmetica, met een rustige shop, het verhaal van de verzorging en een directe manier om contact op te nemen.",
+      tags: ["E-commerce", "Beauty", "Boutique"],
       features: [
-        "Collecties bekijken en productpagina's",
-        "Beheer van de winkelwagen",
-        "Bestellen via WhatsApp vanaf het product",
+        "Een shop voor verzorging in kleine series",
+        "Het merkverhaal en het vakmanschap",
+        "Contact en WhatsApp vanaf de site",
       ],
+    },
+    solara: {
+      category: "Energie",
+      status: "Live demo",
+      headline: "Een helderdere manier van leven.",
+      description:
+        "Een site voor een zonnestudio, voor woningen en bedrijven, met oplossingen, een besparingsschatting en een offerteaanvraag.",
+      tags: ["Energie", "Website", "Leadgeneratie"],
+      features: ["Oplossingen voor woning en bedrijf", "Een schatting van de besparing", "Een demo-offerte"],
+    },
+    "nova-dental": {
+      category: "Zorg",
+      status: "Live demo",
+      headline: "Een aandachtige kijk op tandheelkunde.",
+      description:
+        "Een site voor een tandartspraktijk rond comfort, met behandelingen, het team en een eenvoudig bezoekverzoek.",
+      tags: ["Zorg", "Website", "Afspraken"],
+      features: ["Behandelingen en de aanpak van de praktijk", "Team en veelgestelde vragen", "Een verzoek om een bezoek"],
+    },
+    "lune-events": {
+      category: "Evenementen",
+      status: "Live demo",
+      headline: "Een kunst van vieren.",
+      description:
+        "Een redactionele site voor vieringen, met bijeenkomsten, een journaal en een manier om te beginnen met plannen.",
+      tags: ["Evenementen", "Redactioneel", "Website"],
+      features: ["Verhalen en vieringservaringen", "Een journaal en atelier", "Een aanvraag om te starten"],
     },
     "rif-drive": {
       category: "Autoverhuur",
-      status: "Concept",
-      headline: "",
+      status: "Live demo",
+      headline: "Ga je eigen weg.",
       description:
-        "Een verhuurplatform gericht op aanvragen, met een wagenparkcatalogus en een duidelijke boekingsroute.",
-      tags: ["Automotive", "Website", "Boekingservaring"],
+        "Een verhuursite voor de Rif, met een wagenpark, het verhaal van de rit en een manier om een auto te vinden.",
+      tags: ["Automotive", "Website", "Boeken"],
+      features: ["Een wagenpark om te bekijken", "Het verhaal van rijden in de Rif", "Een ritaanvraag"],
+    },
+    "atelier-beaute": {
+      category: "Beautystudio",
+      status: "Live demo",
+      headline: "Schoonheid, op jouw voorwaarden.",
+      description:
+        "Een site voor een beautystudio, met rituelen, geselecteerd werk en een pad om een eerste bezoek te boeken.",
+      tags: ["Beauty", "Studio", "Boeken"],
+      features: ["Diensten en studiorituelen", "Een blik op het werk", "Een boekingsaanvraag"],
+    },
+    riffit: {
+      category: "Fitness",
+      status: "Live demo",
+      headline: "Kom opdagen. Ga vooruit.",
+      description:
+        "Een site voor een trainingsclub, met programma's, een weekschema, coaches en een aanvraag voor een eerste sessie.",
+      tags: ["Fitness", "Website", "Planning"],
       features: [
-        "Een wagenparkcatalogus met een duidelijke presentatie van elk voertuig",
-        "Een korte boekingsaanvraag, geen namaakafrekening",
-        "Data, ophalen en terugbrengen op één plek",
+        "Programma's voor kracht, conditie en mobiliteit",
+        "Een weekschema en coachprofielen",
+        "Een aanvraag voor een proefsessie",
       ],
     },
-    "atelier-cafe": {
-      category: "Horeca",
-      status: "Concept",
-      headline: "",
+    morrow: {
+      category: "Beauty en e-commerce",
+      status: "Live demo",
+      headline: "Schoonheid voor elke versie van jou.",
       description:
-        "Een digitale thuisbasis voor een modern café, met menu, sfeer en eenvoudige interactie met gasten.",
-      tags: ["Horeca", "Website", "Digitaal menu"],
-      features: [
-        "Een homepage die de sfeer vooropstelt",
-        "Een digitaal menu dat snel te lezen is",
-        "Een eenvoudige manier voor gasten om contact op te nemen",
-      ],
+        "Een inclusieve beautyshop met een helder productverhaal en een tas om het assortiment te bekijken.",
+      tags: ["E-commerce", "Beauty", "Merk"],
+      features: ["Een shop rond dagelijkse rituelen", "Het merkverhaal", "Een tas voor het assortiment"],
+    },
+    noura: {
+      category: "Mode en e-commerce",
+      status: "Live demo",
+      headline: "Bescheiden van nature.",
+      description:
+        "Een modestore voor hijabs, abaya's en jurken, met collecties bekijken en afrekenen.",
+      tags: ["E-commerce", "Mode", "Catalogus"],
+      features: ["Hijabs, abaya's en jurken", "Collecties bekijken met kleuropties", "Tas en afrekenen"],
     },
     "rif-living": {
       category: "Vastgoed",
-      status: "Concept",
-      headline: "",
+      status: "Live demo",
+      headline: "Vind je plek in de Rif.",
       description:
-        "Een ervaring om woningen te ontdekken, met verzorgde aanbiedingen, filters en contact gericht op een aanvraag.",
-      tags: ["Vastgoed", "Aanbod", "Webapplicatie"],
-      features: [
-        "Ruime pagina's voor het aanbod",
-        "Filters om woningen te bekijken",
-        "Een aanvraag in plaats van een verzonnen aankoopproces",
-      ],
+        "Een vastgoedsite om te kopen of te huren in de Rif, met filters voor plaats, type en budget.",
+      tags: ["Vastgoed", "Aanbod", "Zoeken"],
+      features: ["Woningen om te kopen of te huren", "Filters voor plaats, type en budget", "Een pad om een woning aan te bieden"],
+    },
+    "furry-friends": {
+      category: "Huisdieren",
+      status: "Live demo",
+      headline: "Geef een harige vriend een nieuw leven.",
+      description:
+        "Een site voor adoptie en herplaatsing, met zoeken naar dieren, verzorgingstips en een duidelijk pad voor gezinnen.",
+      tags: ["Marktplaats", "Huisdieren", "Zoeken"],
+      features: ["Een dier adopteren of herplaatsen", "Zoeken op naam, ras of stad", "Verzorgingsgids en reviews"],
+    },
+    "miel-et-creme": {
+      category: "Food en horeca",
+      status: "Live demo",
+      headline: "Een beetje vreugde in elke laag.",
+      description:
+        "Een site voor een taartstudio, met een assortiment, de filosofie van het huis en een aanvraag voor een taart op maat.",
+      tags: ["Horeca", "E-commerce", "Merk"],
+      features: ["Een catalogus van taarten en zoetigheden", "De filosofie van het huis", "Een aanvraag voor een taart op maat"],
     },
   },
 };

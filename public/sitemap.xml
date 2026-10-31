@@ -31,17 +31,57 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://innovatechs.com/work/solara</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/work/nova-dental</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/work/lune-events</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://innovatechs.com/work/rif-drive</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://innovatechs.com/work/atelier-cafe</loc>
+    <loc>https://innovatechs.com/work/atelier-beaute</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/work/riffit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/work/morrow</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/work/noura</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/rif-living</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/work/furry-friends</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/work/miel-et-creme</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
