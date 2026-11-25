@@ -16,7 +16,7 @@
 - [ ] Confirm email, phone and WhatsApp numbers are the ones to publish
 - [ ] Add verified portfolio projects only (see notes in `src/constants/projects.js`)
 - [x] Add Instagram + Facebook profile URLs (LinkedIn/GitHub still optional via `.env`)
-- [ ] Update `REACT_APP_SITE_URL`, `sitemap.xml`, `index.html` canonical to the live domain
+- [x] Update `REACT_APP_SITE_URL`, `sitemap.xml`, `index.html` canonical to `https://www.innovatechs.tech`
 - [ ] Optional: export `og-image.svg` → `og-image.png` (1200×630) for best social previews
 
 ## Morocco SEO / GEO (shipped)

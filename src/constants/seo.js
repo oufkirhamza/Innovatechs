@@ -1,6 +1,6 @@
 export const SITE_URL = (
   process.env.REACT_APP_SITE_URL ||
-  "https://innovatechs.com"
+  "https://www.innovatechs.tech"
 ).replace(/\/$/, "");
 
 /** BCP 47 tags used in hreflang / og:locale */

@@ -10,7 +10,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const buildDir = path.join(root, "build");
-const SITE = "https://innovatechs.com";
+const SITE = "https://www.innovatechs.tech";
 
 const LOCALES = [
   { code: "en", hreflang: "en", og: "en_US", prefix: "" },
@@ -283,7 +283,7 @@ function injectPage(template, page, locale) {
   html = html.replace(/<noscript>[\s\S]*?<\/noscript>/, noscript.trim());
 
   // Ensure organization JSON-LD present
-  if (!html.includes('"@id": "https://innovatechs.com/#organization"')) {
+  if (!html.includes('"@id": "https://www.innovatechs.tech/#organization"')) {
     html = html.replace(
       "</head>",
       `  <script type="application/ld+json">${ORG_JSON_LD}</script>\n  </head>`

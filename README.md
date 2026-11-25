@@ -57,7 +57,7 @@ Output is in `build/`.
 
 After deploy, update:
 
-- `public/sitemap.xml` — replace `https://innovatechs.com` with your domain
+- `public/sitemap.xml` — replace `https://www.innovatechs.tech` with your domain
 - `public/robots.txt` — update the Sitemap URL
 - `public/index.html` — `canonical` and `og:url` meta tags
 
