@@ -4,6 +4,18 @@
   "description": "Morocco-based studio for websites, custom applications and practical AI automation.",
   "icons": [
     {
+      "src": "favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon",
