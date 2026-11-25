@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Host: https://innovatechs.com
 Sitemap: https://innovatechs.com/sitemap.xml

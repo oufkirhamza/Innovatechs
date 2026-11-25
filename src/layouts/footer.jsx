@@ -89,14 +89,22 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <p className="eyebrow">{t.footer.services}</p>
             <ul className="mt-4 flex flex-col gap-2.5">
+              <li>
+                <Link
+                  to={to("/services")}
+                  className="w-fit text-sm text-ink/85 transition-colors hover:text-teta"
+                >
+                  {t.nav.services}
+                </Link>
+              </li>
               {SERVICES.map((service) => (
                 <li key={service.id}>
-                  <NavAnchor
-                    sectionId={`service-${service.id}`}
+                  <Link
+                    to={to(`/services/${service.id}`)}
                     className="text-sm text-ink/85 transition-colors hover:text-teta"
                   >
                     {t.services.items[service.id].title}
-                  </NavAnchor>
+                  </Link>
                 </li>
               ))}
             </ul>

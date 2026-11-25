@@ -4,9 +4,15 @@ import en from "./en";
 import fr from "./fr";
 import nl from "./nl";
 import ar from "./ar";
+import { servicePages } from "./servicePages";
 import { LocaleContext, detectLocale, localizePath, stripLocale } from "./locale";
 
-const MESSAGES = { en, fr, nl, ar };
+const MESSAGES = {
+  en: { ...en, servicePages: servicePages.en },
+  fr: { ...fr, servicePages: servicePages.fr },
+  nl: { ...nl, servicePages: servicePages.nl },
+  ar: { ...ar, servicePages: servicePages.ar },
+};
 
 const HTML_LANG = { en: "en", fr: "fr", nl: "nl", ar: "ar" };
 

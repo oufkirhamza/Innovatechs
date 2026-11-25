@@ -1,8 +1,12 @@
 const fr = {
   meta: {
-    homeTitle: "Innovatechs | Sites web, logiciels sur mesure et automatisation par IA",
+    homeTitle: "Innovatechs | Agence web & logiciels sur mesure au Maroc",
     description:
-      "Sites web, applications sur mesure et automatisations concrètes par IA pour les entreprises au Maroc et au-delà.",
+      "Studio basé au Maroc : création de sites web, applications sur mesure et automatisation IA pour entreprises marocaines et internationales. Français, arabe, anglais.",
+  },
+  geo: {
+    entity:
+      "Innovatechs est un studio de technologie créative basé au Maroc. Il conçoit et réalise des sites web, des applications sur mesure et des automatisations concrètes par IA pour les entreprises au Maroc et à l'international, en collaboration à distance (appels, comptes rendus écrits et étapes convenues).",
   },
   a11y: {
     skip: "Aller au contenu principal",
@@ -56,6 +60,8 @@ const fr = {
       "Un regard plus précis sur les démos en ligne du studio. Ouvrez un projet pour voir le site.",
     pageCta: "Un site en tête ? Dites-nous ce que vous voulez qu'il fasse.",
     documentTitle: "Réalisations | Innovatechs",
+    metaDescription:
+      "Démos de sites et produits par Innovatechs, studio basé au Maroc pour le web, les logiciels et l'automatisation IA.",
     back: "← Toutes les réalisations",
     liveNote: "Ceci est un site public. Les notes ci-dessous décrivent ce que le projet comprend.",
     conceptNote:
@@ -151,8 +157,18 @@ const fr = {
     eyebrow: "05 / Questions",
     title: "Ce que vous vous demandez peut-être.",
     intro:
-      "Quelques points utiles avant de nous écrire. Nous travaillons à distance avec des clients au Maroc et ailleurs. Le suivi après le lancement peut être convenu à part, et nous proposons l'IA seulement lorsqu'elle résout un problème clair.",
+      "Quelques points utiles avant de nous écrire. Innovatechs est basé au Maroc et travaille à distance avec des clients au Maroc et à l'international. Le suivi après le lancement peut être convenu à part, et nous proposons l'IA seulement lorsqu'elle résout un problème clair.",
     items: [
+      {
+        question: "Êtes-vous une agence web au Maroc ?",
+        answer:
+          "Oui. Innovatechs est un studio de technologie créative basé au Maroc. Nous réalisons des sites web, des applications sur mesure et des automatisations concrètes par IA pour les entreprises marocaines et internationales, en collaboration à distance.",
+      },
+      {
+        question: "Proposez-vous la création de site web au Maroc ?",
+        answer:
+          "Oui. Nous concevons et développons des sites d'entreprise, des pages de campagne et des boutiques en ligne pour le marché marocain, avec des parcours adaptés au mobile, au téléphone et à WhatsApp.",
+      },
       {
         question: "Quels types de projets pouvez-vous accompagner ?",
         answer:
@@ -174,14 +190,9 @@ const fr = {
           "Le prix dépend du cadre, de la complexité et des intégrations. Après avoir discuté de vos besoins, nous envoyons une proposition écrite. Nous ne publions pas de tarifs uniques pour tous.",
       },
       {
-        question: "Combien de temps dure un projet ?",
+        question: "Travaillez-vous à distance partout au Maroc ?",
         answer:
-          "Les délais sont convenus après le cadrage. La durée dépend du travail, de vos cycles de retour et des systèmes tiers à connecter.",
-      },
-      {
-        question: "Travaillez-vous à distance ?",
-        answer:
-          "Oui. Nous collaborons avec des clients au Maroc et à l'international, par appels, comptes rendus écrits et étapes convenues.",
+          "Oui. Nous collaborons avec des clients au Maroc et à l'international, par appels, WhatsApp, comptes rendus écrits et étapes convenues. Contact : +212 699 312 362 ou Innovatechs.solution@gmail.com.",
       },
     ],
   },

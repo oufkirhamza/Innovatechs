@@ -1,8 +1,12 @@
 const nl = {
   meta: {
-    homeTitle: "Innovatechs | Websites, maatwerksoftware en AI-automatisering",
+    homeTitle: "Innovatechs | Webstudio & maatwerksoftware in Marokko",
     description:
-      "Websites, maatwerkapplicaties en praktische AI-automatisering voor bedrijven in Marokko en daarbuiten.",
+      "Studio gevestigd in Marokko: websites, maatwerkapplicaties en praktische AI-automatisering voor Marokkaanse en internationale bedrijven.",
+  },
+  geo: {
+    entity:
+      "Innovatechs is een studio voor creatieve technologie gevestigd in Marokko. Zij ontwerpt en bouwt websites, maatwerkapplicaties en praktische AI-automatisering voor bedrijven in Marokko en internationaal, via samenwerking op afstand.",
   },
   a11y: {
     skip: "Ga naar de hoofdinhoud",
@@ -56,6 +60,8 @@ const nl = {
       "Een preciezere blik op de live demo's van de studio. Open een project om de site te bekijken.",
     pageCta: "Een site in gedachten? Vertel ons wat die moet doen.",
     documentTitle: "Werk | Innovatechs",
+    metaDescription:
+      "Geselecteerde website- en productdemo's van Innovatechs, een studio in Marokko voor web, software en AI-automatisering.",
     back: "← Al het werk",
     liveNote: "Dit is een openbare site. De notities hieronder beschrijven wat het project omvat.",
     conceptNote:
@@ -150,8 +156,13 @@ const nl = {
     eyebrow: "05 / Vragen",
     title: "Wat u zich misschien afvraagt.",
     intro:
-      "Een paar dingen die nuttig zijn voordat u ons schrijft. We werken op afstand met klanten in Marokko en elders. Ondersteuning na de lancering kan apart worden afgesproken, en we stellen AI alleen voor als die een duidelijk probleem oplost.",
+      "Een paar dingen die nuttig zijn voordat u ons schrijft. Innovatechs is gevestigd in Marokko en werkt op afstand met klanten lokaal en internationaal. Ondersteuning na de lancering kan apart worden afgesproken, en we stellen AI alleen voor als die een duidelijk probleem oplost.",
     items: [
+      {
+        question: "Zijn jullie een webagency in Marokko?",
+        answer:
+          "Ja. Innovatechs is een studio voor creatieve technologie gevestigd in Marokko. Wij bouwen websites, maatwerkapplicaties en praktische AI-automatisering voor Marokkaanse en internationale bedrijven, via samenwerking op afstand.",
+      },
       {
         question: "Met welke projecten kunnen jullie helpen?",
         answer:
@@ -173,14 +184,9 @@ const nl = {
           "De prijs hangt af van de omvang, de complexiteit en de integraties. Nadat we uw behoeften hebben besproken, sturen we een schriftelijk voorstel. We publiceren geen prijzen die voor iedereen hetzelfde zijn.",
       },
       {
-        question: "Hoe lang duurt een project?",
+        question: "Werken jullie op afstand in heel Marokko?",
         answer:
-          "De planning wordt afgesproken na het bepalen van de omvang. De duur hangt af van het werk, uw feedbackrondes en systemen van derden die we moeten koppelen.",
-      },
-      {
-        question: "Werken jullie op afstand?",
-        answer:
-          "Ja. We werken samen met klanten in Marokko en internationaal, via gesprekken, schriftelijke updates en afgesproken mijlpalen.",
+          "Ja. We werken samen met klanten in Marokko en internationaal, via gesprekken, WhatsApp, schriftelijke updates en afgesproken mijlpalen. Contact: +212 699 312 362 of Innovatechs.solution@gmail.com.",
       },
     ],
   },

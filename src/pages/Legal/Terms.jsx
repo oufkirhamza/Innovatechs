@@ -1,16 +1,18 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import SeoHead from "../../components/SeoHead";
 import { SITE } from "../../constants/site";
 import { dateLocale, useLocale } from "../../i18n/locale";
 
 const Terms = () => {
   const { t, to, lang } = useLocale();
 
-  useEffect(() => {
-    document.title = `${t.legal.termsTitle} | Innovatechs`;
-  }, [t.legal.termsTitle]);
-
   return (
+  <>
+  <SeoHead
+    title={`${t.legal.termsTitle} | Innovatechs`}
+    description={t.meta.description}
+    path="/terms"
+  />
   <article className="shell min-h-[60vh] py-16">
     <Link to={to("/")} className="text-teta hover:underline text-sm">
       {t.legal.back}
@@ -57,6 +59,7 @@ const Terms = () => {
       </section>
     </div>
   </article>
+  </>
   );
 };
 

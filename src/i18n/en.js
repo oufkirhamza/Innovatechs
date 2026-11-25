@@ -1,8 +1,12 @@
 const en = {
   meta: {
-    homeTitle: "Innovatechs | Websites, Custom Software & AI Automation",
+    homeTitle: "Innovatechs | Web Agency & Custom Software in Morocco",
     description:
-      "Websites, custom applications and practical AI automations for businesses in Morocco and beyond.",
+      "Morocco-based studio for websites, custom applications and practical AI automation. French, Arabic and English. Discuss your project with Innovatechs.",
+  },
+  geo: {
+    entity:
+      "Innovatechs is a creative technology studio based in Morocco. It designs and builds websites, custom applications and practical AI automations for businesses in Morocco and internationally, working remotely with clients by call, written updates and agreed milestones.",
   },
   a11y: {
     skip: "Skip to main content",
@@ -56,6 +60,8 @@ const en = {
       "A closer look at the live demos in the studio. Open any project to see the site.",
     pageCta: "Have a site in mind? Tell us what you want it to do.",
     documentTitle: "Work | Innovatechs",
+    metaDescription:
+      "Selected website and product demos by Innovatechs, a Morocco-based studio for web, software and AI automation.",
     back: "← All work",
     liveNote: "This is a public site. The notes below describe what the project includes.",
     conceptNote:
@@ -150,8 +156,13 @@ const en = {
     eyebrow: "05 / Questions",
     title: "Things you might be wondering.",
     intro:
-      "A few things worth knowing before you write to us. We work remotely with clients in Morocco and elsewhere. Support after launch can be agreed separately, and we suggest AI only when it solves a clear problem.",
+      "A few things worth knowing before you write to us. Innovatechs is based in Morocco and works remotely with clients locally and abroad. Support after launch can be agreed separately, and we suggest AI only when it solves a clear problem.",
     items: [
+      {
+        question: "Are you a web agency in Morocco?",
+        answer:
+          "Yes. Innovatechs is a creative technology studio based in Morocco. We build websites, custom applications and practical AI automations for Moroccan and international businesses, collaborating remotely.",
+      },
       {
         question: "What types of projects can you help with?",
         answer:
@@ -178,9 +189,9 @@ const en = {
           "Timelines are agreed after scoping. Duration depends on the work involved, your feedback cycles and any third-party systems we need to connect.",
       },
       {
-        question: "Do you work remotely?",
+        question: "Do you work remotely across Morocco?",
         answer:
-          "Yes. We collaborate with clients across Morocco and internationally through calls, written updates and agreed milestones.",
+          "Yes. We collaborate with clients across Morocco and internationally through calls, WhatsApp, written updates and agreed milestones. Reach us on +212 699 312 362 or Innovatechs.solution@gmail.com.",
       },
     ],
   },

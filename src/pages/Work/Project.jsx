@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
+import SeoHead from "../../components/SeoHead";
 import { ProjectPreview } from "../../components/mockups/ConceptMockups";
 import { PROJECTS, projectPath } from "../../data/projects";
 import NotFound from "../NotFound";
@@ -16,15 +16,18 @@ const ProjectPage = () => {
     ...t.projects[item.id],
   }));
 
-  useEffect(() => {
-    if (source) document.title = `${source.title} | Innovatechs`;
-  }, [source]);
-
   if (!project) return <NotFound />;
 
   const isLive = Boolean(project.liveUrl);
+  const description = project.description || t.meta.description;
 
   return (
+    <>
+      <SeoHead
+        title={`${project.title} | Innovatechs`}
+        description={description}
+        path={`/work/${project.slug}`}
+      />
     <article className="shell pb-16 pt-10 lg:pb-24 lg:pt-14">
       <Link
         to={to("/work")}
@@ -140,6 +143,7 @@ const ProjectPage = () => {
         </div>
       )}
     </article>
+    </>
   );
 };
 

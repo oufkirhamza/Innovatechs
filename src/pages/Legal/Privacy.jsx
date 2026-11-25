@@ -1,16 +1,18 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import SeoHead from "../../components/SeoHead";
 import { SITE } from "../../constants/site";
 import { dateLocale, useLocale } from "../../i18n/locale";
 
 const Privacy = () => {
   const { t, to, lang } = useLocale();
 
-  useEffect(() => {
-    document.title = `${t.legal.privacyTitle} | Innovatechs`;
-  }, [t.legal.privacyTitle]);
-
   return (
+  <>
+  <SeoHead
+    title={`${t.legal.privacyTitle} | Innovatechs`}
+    description={t.meta.description}
+    path="/privacy"
+  />
   <article className="shell min-h-[60vh] py-16">
     <Link to={to("/")} className="text-teta hover:underline text-sm">
       {t.legal.back}
@@ -60,6 +62,7 @@ const Privacy = () => {
       </section>
     </div>
   </article>
+  </>
   );
 };
 

@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
+import SeoHead from "../../components/SeoHead";
 import { ProjectPreview } from "../../components/mockups/ConceptMockups";
 import { PROJECTS, projectPath } from "../../data/projects";
 import { useLocale } from "../../i18n/locale";
@@ -8,11 +8,13 @@ import { useLocale } from "../../i18n/locale";
 const WorkPage = () => {
   const { t, to } = useLocale();
 
-  useEffect(() => {
-    document.title = t.work.documentTitle;
-  }, [t.work.documentTitle]);
-
   return (
+    <>
+      <SeoHead
+        title={t.work.documentTitle}
+        description={t.work.metaDescription || t.meta.description}
+        path="/work"
+      />
     <div className="shell pb-16 pt-12 sm:pt-16 lg:pb-24 lg:pt-20">
       <p className="eyebrow">{t.work.pageEyebrow}</p>
       <div className="mt-4 grid gap-6 lg:grid-cols-[1.4fr_0.8fr] lg:items-end">
@@ -85,6 +87,7 @@ const WorkPage = () => {
         </Link>
       </div>
     </div>
+    </>
   );
 };
 

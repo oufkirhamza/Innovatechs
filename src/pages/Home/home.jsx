@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { AboutSection } from "./components/aboutSection";
 import { useLocale } from "../../i18n/locale";
 import { Contact } from "./components/contact";
@@ -9,16 +8,18 @@ import { ServiceSection } from "./components/serviceSection";
 import { WorkSection } from "./components/workSection";
 import BrandStrip from "../../components/BrandStrip";
 import PreFooterCta from "../../components/PreFooterCta";
+import SeoHead from "../../components/SeoHead";
 
 export const HomePage = () => {
   const { t } = useLocale();
 
-  useEffect(() => {
-    document.title = t.meta.homeTitle;
-  }, [t.meta.homeTitle]);
-
   return (
     <>
+      <SeoHead
+        title={t.meta.homeTitle}
+        description={t.meta.description}
+        path="/"
+      />
       <FirstSection />
       <BrandStrip />
       <WorkSection />

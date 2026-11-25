@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && node scripts/prerender-seo.mjs",
+    "prerender": "node scripts/prerender-seo.mjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

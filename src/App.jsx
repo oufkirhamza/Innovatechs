@@ -3,6 +3,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { HomePage } from "./pages/Home/home";
 import WorkPage from "./pages/Work/Work";
 import ProjectPage from "./pages/Work/Project";
+import ServicesHub from "./pages/Services/ServicesHub";
+import ServicePage from "./pages/Services/ServicePage";
 import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Legal/Privacy";
 import Terms from "./pages/Legal/Terms";
@@ -55,6 +57,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/work/:slug" element={<ProjectPage />} />
+          <Route path="/services" element={<ServicesHub />} />
+          <Route path="/services/:slug" element={<ServicePage />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />

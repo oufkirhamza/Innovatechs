@@ -19,9 +19,18 @@
 - [ ] Update `REACT_APP_SITE_URL`, `sitemap.xml`, `index.html` canonical to the live domain
 - [ ] Optional: export `og-image.svg` → `og-image.png` (1200×630) for best social previews
 
+## Morocco SEO / GEO (shipped)
+
+- [x] Locale meta, canonical, hreflang (en / fr-MA / ar-MA / nl)
+- [x] Morocco entity schema (ProfessionalService + FAQ + Service pages)
+- [x] Dedicated `/services` landing pages (FR-first keyword copy)
+- [x] Post-build prerender shells + hreflang sitemap
+- [ ] Submit sitemap in Google Search Console (Search results → Morocco)
+- [ ] Create Google Business Profile if a verifiable address exists
+- [ ] Add social profile URLs for Organization `sameAs`
+
 ## Future enhancements
 
-- [ ] French (FR) copy or i18n
 - [ ] Verified case study pages
-- [ ] Blog / insights
+- [ ] Blog / insights (French Morocco topics)
 - [ ] Lighthouse performance pass

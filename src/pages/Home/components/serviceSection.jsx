@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 import { Section, Eyebrow } from "../../../components/Section";
 import { SERVICES } from "../../../data/services";
@@ -6,7 +7,7 @@ import { scrollToSection } from "../../../utils/scrollToSection";
 import { useLocale } from "../../../i18n/locale";
 
 export const ServiceSection = () => {
-  const { t } = useLocale();
+  const { t, to } = useLocale();
   const [openId, setOpenId] = useState(null);
 
   const discuss = () => {
@@ -76,14 +77,24 @@ export const ServiceSection = () => {
                     <span className="w-6 sm:w-7" aria-hidden />
                     <div className="max-w-xl">
                       <p className="text-[15px] leading-relaxed text-muted">{copy.detail}</p>
-                      <button
-                        type="button"
-                        onClick={discuss}
-                        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-teta"
-                        tabIndex={open ? 0 : -1}
-                      >
-                        {t.services.discuss} <MdArrowOutward aria-hidden />
-                      </button>
+                      <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+                        <Link
+                          to={to(`/services/${service.id}`)}
+                          className="inline-flex items-center gap-2 text-sm font-medium text-ink hover:text-teta"
+                          tabIndex={open ? 0 : -1}
+                        >
+                          {t.servicePages.learnMore}{" "}
+                          <MdArrowOutward aria-hidden />
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={discuss}
+                          className="inline-flex items-center gap-2 text-sm font-medium text-teta"
+                          tabIndex={open ? 0 : -1}
+                        >
+                          {t.services.discuss} <MdArrowOutward aria-hidden />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>

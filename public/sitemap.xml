@@ -1,107 +1,1003 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://innovatechs.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/" />
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://innovatechs.com/nl</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/" />
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/" />
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/services/websites</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/websites" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/websites" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/websites" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/websites" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/websites" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/services/websites</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/websites" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/websites" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/websites" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/websites" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/websites" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/services/websites</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/websites" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/websites" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/websites" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/websites" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/websites" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/services/websites</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/websites" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/websites" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/websites" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/websites" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/websites" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/services/applications</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/applications" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/applications" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/applications" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/applications" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/applications" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/services/applications</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/applications" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/applications" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/applications" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/applications" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/applications" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/services/applications</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/applications" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/applications" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/applications" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/applications" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/applications" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/services/applications</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/applications" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/applications" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/applications" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/applications" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/applications" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/services/automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/automation" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/automation" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/automation" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/automation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/automation" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/services/automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/automation" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/automation" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/automation" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/automation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/automation" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/services/automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/automation" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/automation" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/automation" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/automation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/automation" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/services/automation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/automation" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/automation" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/automation" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/automation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/automation" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/services/integrations</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/integrations" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/services/integrations</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/integrations" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/services/integrations</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/integrations" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/services/integrations</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/services/integrations" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/services/integrations" />
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/maison-nera</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/maison-nera" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/maison-nera</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/maison-nera" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/maison-nera</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/maison-nera" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/maison-nera</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/maison-nera" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/maison-nera" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/solara</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/solara" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/solara" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/solara" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/solara" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/solara" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/solara</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/solara" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/solara" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/solara" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/solara" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/solara" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/solara</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/solara" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/solara" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/solara" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/solara" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/solara" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/solara</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/solara" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/solara" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/solara" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/solara" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/solara" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/nova-dental</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/nova-dental" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/nova-dental</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/nova-dental" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/nova-dental</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/nova-dental" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/nova-dental</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/nova-dental" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/nova-dental" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/lune-events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/lune-events" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/lune-events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/lune-events" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/lune-events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/lune-events" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/lune-events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/lune-events" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/lune-events" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/rif-drive</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-drive" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/rif-drive</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-drive" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/rif-drive</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-drive" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/rif-drive</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-drive" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-drive" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/atelier-beaute</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/atelier-beaute" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/atelier-beaute</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/atelier-beaute" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/atelier-beaute</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/atelier-beaute" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/atelier-beaute</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/atelier-beaute" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/atelier-beaute" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/riffit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/riffit" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/riffit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/riffit" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/riffit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/riffit" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/riffit</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/riffit" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/riffit" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/morrow</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/morrow" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/morrow</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/morrow" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/morrow</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/morrow" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/morrow</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/morrow" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/morrow" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/noura</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/noura" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/noura" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/noura" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/noura" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/noura" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/noura</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/noura" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/noura" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/noura" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/noura" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/noura" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/noura</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/noura" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/noura" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/noura" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/noura" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/noura" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/noura</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/noura" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/noura" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/noura" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/noura" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/noura" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/rif-living</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-living" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/rif-living</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-living" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/rif-living</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-living" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/rif-living</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-living" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-living" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/furry-friends</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/furry-friends" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/furry-friends</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/furry-friends" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/furry-friends</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/furry-friends" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/furry-friends</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/furry-friends" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/furry-friends" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/miel-et-creme</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/miel-et-creme" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/miel-et-creme</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/miel-et-creme" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/miel-et-creme</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/miel-et-creme" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/miel-et-creme</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/miel-et-creme" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/miel-et-creme" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/rif-adventures</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-adventures" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/rif-adventures</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-adventures" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/rif-adventures</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-adventures" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/rif-adventures</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-adventures" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-adventures" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/rif-business-desk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-business-desk" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/rif-business-desk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-business-desk" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/rif-business-desk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-business-desk" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/rif-business-desk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-business-desk" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-business-desk" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/rif-academy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-academy" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/rif-academy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-academy" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/rif-academy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-academy" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/rif-academy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-academy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-academy" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://innovatechs.com/work/rif-autocare</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-autocare" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/work/rif-autocare</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-autocare" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/work/rif-autocare</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-autocare" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/work/rif-autocare</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/work/rif-autocare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/work/rif-autocare" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/privacy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/privacy" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/privacy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/privacy" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/privacy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/privacy" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/privacy" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/privacy" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/privacy" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/terms" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/terms" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/terms" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/fr/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/terms" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/terms" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/terms" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/ar/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/terms" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/terms" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/terms" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://innovatechs.com/nl/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://innovatechs.com/terms" />
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="https://innovatechs.com/fr/terms" />
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="https://innovatechs.com/ar/terms" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innovatechs.com/nl/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innovatechs.com/terms" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
