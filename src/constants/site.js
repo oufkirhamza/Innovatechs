@@ -13,8 +13,11 @@ export const SITE = {
 
 export const SOCIAL = {
   twitter: process.env.REACT_APP_SOCIAL_TWITTER || "",
-  instagram: process.env.REACT_APP_SOCIAL_INSTAGRAM || "",
-  facebook: process.env.REACT_APP_SOCIAL_FACEBOOK || "",
+  instagram:
+    process.env.REACT_APP_SOCIAL_INSTAGRAM || "https://www.instagram.com/innovatechs/",
+  facebook:
+    process.env.REACT_APP_SOCIAL_FACEBOOK ||
+    "https://www.facebook.com/profile.php?id=61596532763486",
   linkedin: process.env.REACT_APP_SOCIAL_LINKEDIN || "",
   github: process.env.REACT_APP_SOCIAL_GITHUB || "",
 };

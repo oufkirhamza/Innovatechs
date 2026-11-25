@@ -15,7 +15,7 @@
 - [ ] Set `REACT_APP_FORMSPREE_FORM_ID` for working form delivery
 - [ ] Confirm email, phone and WhatsApp numbers are the ones to publish
 - [ ] Add verified portfolio projects only (see notes in `src/constants/projects.js`)
-- [ ] Add social profile URLs in `.env` when ready
+- [x] Add Instagram + Facebook profile URLs (LinkedIn/GitHub still optional via `.env`)
 - [ ] Update `REACT_APP_SITE_URL`, `sitemap.xml`, `index.html` canonical to the live domain
 - [ ] Optional: export `og-image.svg` → `og-image.png` (1200×630) for best social previews
 
@@ -27,7 +27,7 @@
 - [x] Post-build prerender shells + hreflang sitemap
 - [ ] Submit sitemap in Google Search Console (Search results → Morocco)
 - [ ] Create Google Business Profile if a verifiable address exists
-- [ ] Add social profile URLs for Organization `sameAs`
+- [x] Add social profile URLs for Organization `sameAs` (Instagram + Facebook)
 
 ## Future enhancements
 

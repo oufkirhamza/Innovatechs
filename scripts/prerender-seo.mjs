@@ -182,6 +182,10 @@ const ORG_JSON_LD = JSON.stringify({
   areaServed: { "@type": "Country", name: "Morocco" },
   description:
     "Innovatechs is a creative technology studio based in Morocco. It designs and builds websites, custom applications and practical AI automations for businesses in Morocco and internationally.",
+  sameAs: [
+    "https://www.instagram.com/innovatechs/",
+    "https://www.facebook.com/profile.php?id=61596532763486",
+  ],
 });
 
 function localizedUrl(barePath, locale) {
