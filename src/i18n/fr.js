@@ -397,6 +397,58 @@ const fr = {
       tags: ["Pâtisserie", "Commerce en ligne", "Marque"],
       features: ["Un catalogue de gâteaux et de douceurs", "La philosophie de la maison", "Une demande de gâteau sur mesure"],
     },
+    "rif-adventures": {
+      category: "Tourisme",
+      status: "Démo en ligne",
+      headline: "La Méditerranée, côté Rif.",
+      description:
+        "Un site de sorties en mer et de plongée à Al Hoceima, avec des expériences côtières, des baptêmes et une réservation par WhatsApp.",
+      tags: ["Tourisme", "Réservation", "WhatsApp"],
+      features: [
+        "Sorties bateau, snorkeling et plongée",
+        "Date et taille du groupe dans une courte demande",
+        "Confirmation sur WhatsApp",
+      ],
+    },
+    "rif-business-desk": {
+      category: "Services aux entreprises",
+      status: "Démo en ligne",
+      headline: "Votre entreprise, bien posée dès le départ.",
+      description:
+        "Un bureau d'accompagnement à Al Hoceima pour la création d'entreprise, la domiciliation et le suivi administratif.",
+      tags: ["Services", "Site web", "Prise de contact"],
+      features: [
+        "Orientation pour résidents, MRE et investisseurs étrangers",
+        "Parcours SARL, SARL AU et auto-entrepreneur",
+        "Une demande de consultation avant le devis",
+      ],
+    },
+    "rif-academy": {
+      category: "Formation",
+      status: "Démo en ligne",
+      headline: "Une compétence utile, près de chez vous.",
+      description:
+        "Un centre de formation pour les langues, l'informatique, la bureautique et le marketing digital, en présentiel ou en ligne.",
+      tags: ["Formation", "Site web", "Inscription"],
+      features: [
+        "Formations courtes dans quatre domaines",
+        "Sessions à venir en journée, le soir et le week-end",
+        "Une demande de place confirmée par le centre",
+      ],
+    },
+    "rif-autocare": {
+      category: "Automobile",
+      status: "Démo en ligne",
+      headline: "On regarde, on explique, puis on répare.",
+      description:
+        "Un site de garage pour la mécanique et le detailing à Al Hoceima, avec des packs clairs et un devis sur WhatsApp.",
+      tags: ["Automobile", "Services", "WhatsApp"],
+      features: [
+        "Mécanique, pneus, carrosserie et detailing",
+        "Comparer les packs detailing avec des prix indicatifs",
+        "Un devis WhatsApp avant toute intervention",
+      ],
+    },
   },
 };
 

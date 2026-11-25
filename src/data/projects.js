@@ -10,6 +10,10 @@ import noura from "../assets/img/projects/noura.jpg";
 import rifLiving from "../assets/img/projects/rif-living.jpg";
 import furryFriends from "../assets/img/projects/furry-friends.jpg";
 import mielEtCreme from "../assets/img/projects/miel-et-creme.jpg";
+import rifAdventures from "../assets/img/projects/rif-adventures.jpg";
+import rifBusinessDesk from "../assets/img/projects/rif-business-desk.jpg";
+import rifAcademy from "../assets/img/projects/rif-academy.jpg";
+import rifAutocare from "../assets/img/projects/rif-autocare.jpg";
 
 /**
  * Live demos published by the studio.
@@ -242,6 +246,82 @@ export const PROJECTS = [
       "A catalog of cakes and sweets",
       "The studio philosophy",
       "A custom-cake enquiry",
+    ],
+  },
+  {
+    id: "rif-adventures",
+    slug: "rif-adventures",
+    title: "Rif Adventures",
+    category: "Tourism",
+    status: "Live demo",
+    headline: "The Mediterranean, from the Rif.",
+    description:
+      "A boat and diving site for Al Hoceima, with coastal trips, first dives, and booking by WhatsApp.",
+    tags: ["Tourism", "Booking", "WhatsApp"],
+    image: rifAdventures,
+    liveUrl: "https://rif-adventures.vercel.app/",
+    featured: false,
+    features: [
+      "Boat trips, snorkeling, and diving experiences",
+      "Date and group size in one short request",
+      "Confirmation on WhatsApp",
+    ],
+  },
+  {
+    id: "rif-business-desk",
+    slug: "rif-business-desk",
+    title: "Rif Business Desk",
+    category: "Business Services",
+    status: "Live demo",
+    headline: "Your company, set up from the start.",
+    description:
+      "A business-creation desk for Al Hoceima, covering company setup, domiciliation, and administrative follow-up.",
+    tags: ["Services", "Website", "Lead generation"],
+    image: rifBusinessDesk,
+    liveUrl: "https://rif-business-desk.vercel.app/",
+    featured: false,
+    features: [
+      "Orientation for residents, MRE, and foreign investors",
+      "SARL, SARL AU, and auto-entrepreneur paths",
+      "A consultation request before the quote",
+    ],
+  },
+  {
+    id: "rif-academy",
+    slug: "rif-academy",
+    title: "Rif Academy",
+    category: "Education",
+    status: "Live demo",
+    headline: "A useful skill, close to home.",
+    description:
+      "A training center site for languages, IT, office tools, and digital marketing, with sessions on site or online.",
+    tags: ["Education", "Website", "Enrollment"],
+    image: rifAcademy,
+    liveUrl: "https://rif-academy.vercel.app/",
+    featured: false,
+    features: [
+      "Short courses across four training areas",
+      "Upcoming sessions with day, evening, and weekend options",
+      "A place request the center confirms",
+    ],
+  },
+  {
+    id: "rif-autocare",
+    slug: "rif-autocare",
+    title: "Rif AutoCare",
+    category: "Automotive",
+    status: "Live demo",
+    headline: "We look, we explain, then we repair.",
+    description:
+      "A garage site for mechanics and detailing in Al Hoceima, with clear packages and a quote request on WhatsApp.",
+    tags: ["Automotive", "Services", "WhatsApp"],
+    image: rifAutocare,
+    liveUrl: "https://rif-autocare.vercel.app/",
+    featured: false,
+    features: [
+      "Mechanics, tires, bodywork, and detailing",
+      "Compare detailing packs with indicative prices",
+      "A WhatsApp quote before any work starts",
     ],
   },
 ];

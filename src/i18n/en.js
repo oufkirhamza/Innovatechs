@@ -395,6 +395,58 @@ const en = {
       tags: ["Hospitality", "E-commerce", "Brand"],
       features: ["A catalog of cakes and sweets", "The studio philosophy", "A custom-cake enquiry"],
     },
+    "rif-adventures": {
+      category: "Tourism",
+      status: "Live demo",
+      headline: "The Mediterranean, from the Rif.",
+      description:
+        "A boat and diving site for Al Hoceima, with coastal trips, first dives, and booking by WhatsApp.",
+      tags: ["Tourism", "Booking", "WhatsApp"],
+      features: [
+        "Boat trips, snorkeling, and diving experiences",
+        "Date and group size in one short request",
+        "Confirmation on WhatsApp",
+      ],
+    },
+    "rif-business-desk": {
+      category: "Business Services",
+      status: "Live demo",
+      headline: "Your company, set up from the start.",
+      description:
+        "A business-creation desk for Al Hoceima, covering company setup, domiciliation, and administrative follow-up.",
+      tags: ["Services", "Website", "Lead generation"],
+      features: [
+        "Orientation for residents, MRE, and foreign investors",
+        "SARL, SARL AU, and auto-entrepreneur paths",
+        "A consultation request before the quote",
+      ],
+    },
+    "rif-academy": {
+      category: "Education",
+      status: "Live demo",
+      headline: "A useful skill, close to home.",
+      description:
+        "A training center site for languages, IT, office tools, and digital marketing, with sessions on site or online.",
+      tags: ["Education", "Website", "Enrollment"],
+      features: [
+        "Short courses across four training areas",
+        "Upcoming sessions with day, evening, and weekend options",
+        "A place request the center confirms",
+      ],
+    },
+    "rif-autocare": {
+      category: "Automotive",
+      status: "Live demo",
+      headline: "We look, we explain, then we repair.",
+      description:
+        "A garage site for mechanics and detailing in Al Hoceima, with clear packages and a quote request on WhatsApp.",
+      tags: ["Automotive", "Services", "WhatsApp"],
+      features: [
+        "Mechanics, tires, bodywork, and detailing",
+        "Compare detailing packs with indicative prices",
+        "A WhatsApp quote before any work starts",
+      ],
+    },
   },
 };
 

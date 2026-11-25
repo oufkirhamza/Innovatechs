@@ -396,6 +396,58 @@ const nl = {
       tags: ["Horeca", "E-commerce", "Merk"],
       features: ["Een catalogus van taarten en zoetigheden", "De filosofie van het huis", "Een aanvraag voor een taart op maat"],
     },
+    "rif-adventures": {
+      category: "Toerisme",
+      status: "Live demo",
+      headline: "De Middellandse Zee, vanaf de Rif.",
+      description:
+        "Een site voor boottochten en duiken in Al Hoceima, met kustuitstapjes, eerste duiken en boeken via WhatsApp.",
+      tags: ["Toerisme", "Boeken", "WhatsApp"],
+      features: [
+        "Boottochten, snorkelen en duikervaringen",
+        "Datum en groepsgrootte in één korte aanvraag",
+        "Bevestiging via WhatsApp",
+      ],
+    },
+    "rif-business-desk": {
+      category: "Zakelijke diensten",
+      status: "Live demo",
+      headline: "Uw bedrijf, vanaf het begin goed neergezet.",
+      description:
+        "Een desk voor bedrijfsoprichting in Al Hoceima, met oprichting, domiciliering en administratieve opvolging.",
+      tags: ["Diensten", "Website", "Leadgeneratie"],
+      features: [
+        "Oriëntatie voor inwoners, MRE en buitenlandse investeerders",
+        "Trajecten voor SARL, SARL AU en auto-entrepreneur",
+        "Een consultatieaanvraag vóór de offerte",
+      ],
+    },
+    "rif-academy": {
+      category: "Opleiding",
+      status: "Live demo",
+      headline: "Een nuttige vaardigheid, dicht bij huis.",
+      description:
+        "Een opleidingscentrum voor talen, IT, kantoortoepassingen en digitale marketing, ter plaatse of online.",
+      tags: ["Opleiding", "Website", "Inschrijving"],
+      features: [
+        "Korte cursussen in vier domeinen",
+        "Komende sessies overdag, 's avonds en in het weekend",
+        "Een plaatsaanvraag die het centrum bevestigt",
+      ],
+    },
+    "rif-autocare": {
+      category: "Automotive",
+      status: "Live demo",
+      headline: "We kijken, we leggen uit, dan repareren we.",
+      description:
+        "Een garagesite voor mechaniek en detailing in Al Hoceima, met duidelijke packs en een offerte via WhatsApp.",
+      tags: ["Automotive", "Diensten", "WhatsApp"],
+      features: [
+        "Mechaniek, banden, carrosserie en detailing",
+        "Detailingpacks vergelijken met richtprijzen",
+        "Een WhatsApp-offerte vóór elk werk",
+      ],
+    },
   },
 };
 
